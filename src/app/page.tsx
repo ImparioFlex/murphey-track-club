@@ -106,27 +106,39 @@ export default function HomePage() {
                 icon: Zap,
                 title: "Elite-Level Coaching",
                 text: "Your coach has coached a World #1, American Record holders, and dozens of Olympic Trials qualifiers. Same coach. Your plan.",
+                link: "/join",
+                cta: "Grassroots Elite",
               },
               {
                 icon: Users,
                 title: "Community That Shows Up",
                 text: "Tuesday track. Thursday tempo. Saturday long run. This is not a group text. This is a team that meets at 6am because they want to be there.",
+                link: "/train",
+                cta: "Train",
               },
               {
                 icon: Mountain,
                 title: "Greenville, SC",
                 text: "220+ sunny days. The Swamp Rabbit Trail. Furman's campus. Paris Mountain. A city that runs, surrounded by a region that races.",
+                link: "/about",
+                cta: "About",
               },
             ].map((item) => (
               <FadeIn key={item.title} className="h-full">
-                <div className="p-6 md:p-10 lg:p-12 hover:bg-mint transition-colors duration-300 h-full">
+                <div className="p-6 md:p-10 lg:p-12 hover:bg-mint transition-colors duration-300 h-full flex flex-col">
                   <item.icon className="w-6 h-6 md:w-8 md:h-8 text-mid-green mb-4 md:mb-6" strokeWidth={1.5} />
                   <h3 className="text-xl font-extrabold font-heading uppercase text-dark-green mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600 font-body leading-relaxed">
+                  <p className="text-slate-600 font-body leading-relaxed mb-6">
                     {item.text}
                   </p>
+                  <Link
+                    href={item.link}
+                    className="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider font-body text-dark-green hover:text-mid-green transition-colors"
+                  >
+                    {item.cta} <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </FadeIn>
             ))}
