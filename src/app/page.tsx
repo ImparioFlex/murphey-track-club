@@ -118,8 +118,8 @@ export default function HomePage() {
                 text: "220+ sunny days. The Swamp Rabbit Trail. Furman's campus. Paris Mountain. A city that runs, surrounded by a region that races.",
               },
             ].map((item) => (
-              <FadeIn key={item.title}>
-                <div className="p-6 md:p-10 lg:p-12 hover:bg-mint transition-colors duration-300">
+              <FadeIn key={item.title} className="h-full">
+                <div className="p-6 md:p-10 lg:p-12 hover:bg-mint transition-colors duration-300 h-full">
                   <item.icon className="w-6 h-6 md:w-8 md:h-8 text-mid-green mb-4 md:mb-6" strokeWidth={1.5} />
                   <h3 className="text-xl font-extrabold font-heading uppercase text-dark-green mb-4">
                     {item.title}
