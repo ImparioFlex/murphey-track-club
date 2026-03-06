@@ -165,7 +165,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: var(--dark-green);
+    background: white;
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -176,6 +176,33 @@ body {
   }
 
   .btn-slide-up-white:hover {
+    color: var(--dark-green);
+  }
+
+  /* Button hover slide — dark green rises from bottom (for buttons on light backgrounds) */
+  .btn-slide-up-dark {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide-up-dark::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--dark-green);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide-up-dark:hover::before {
+    transform: scaleY(1);
+  }
+
+  .btn-slide-up-dark:hover {
     color: white;
   }
 }

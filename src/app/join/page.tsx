@@ -139,7 +139,7 @@ export default function JoinPage() {
                 />
                 <button
                   type="submit"
-                  className="btn-slide-up-white bg-electric text-dark-green w-full px-8 py-4 text-sm font-bold uppercase tracking-wider font-body mt-2"
+                  className="btn-slide-up-dark bg-electric text-dark-green w-full px-8 py-4 text-sm font-bold uppercase tracking-wider font-body mt-2"
                 >
                   Apply Now
                 </button>
