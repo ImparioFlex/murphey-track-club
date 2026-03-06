@@ -322,14 +322,14 @@ export default function AboutPage() {
       </section>
 
       {/* ===== PHOTO DIVIDER ===== */}
-      <section className="relative h-40 md:h-56 overflow-hidden">
+      <section className="relative h-56 md:h-72 overflow-hidden">
         <Image
-          src="/images/track-race.jpg"
-          alt="Track lanes at dusk"
+          src="/images/track-stretch.jpg"
+          alt="Athlete stretching on the track"
           fill
-          className="object-cover object-center"
+          className="object-cover object-[center_60%]"
         />
-        <div className="absolute inset-0 bg-mint/70" />
+        <div className="absolute inset-0 bg-black/20" />
       </section>
 
       {/* ===== BOTTOM CTA ===== */}
