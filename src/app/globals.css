@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black: #0a0a0a;
+  --deep: #051b0e;
+  --dark-green: #0d2818;
+  --forest-green: #166534;
+  --mid-green: #22c55e;
+  --electric: #00ff87;
+  --mint: #f0fdf4;
+  --mint-dark: #dcfce7;
+  --white: #ffffff;
+  --slate-900: #0f172a;
+  --slate-600: #475569;
+  --slate-400: #94a3b8;
+  --slate-200: #e2e8f0;
+  --slate-100: #f1f5f9;
+
+  --font-heading: var(--font-barlow-condensed);
+  --font-body: var(--font-dm-sans);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-black: var(--black);
+  --color-deep: var(--deep);
+  --color-dark-green: var(--dark-green);
+  --color-forest-green: var(--forest-green);
+  --color-mid-green: var(--mid-green);
+  --color-electric: var(--electric);
+  --color-mint: var(--mint);
+  --color-mint-dark: var(--mint-dark);
+  --color-white: var(--white);
+  --color-slate-900: var(--slate-900);
+  --color-slate-600: var(--slate-600);
+  --color-slate-400: var(--slate-400);
+  --color-slate-200: var(--slate-200);
+  --color-slate-100: var(--slate-100);
+
+  --font-heading: var(--font-barlow-condensed);
+  --font-body: var(--font-dm-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  color: var(--slate-900);
+  background: #ffffff;
+  font-size: clamp(16px, 2.5vw, 18px);
+  line-height: 1.7;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Electric glow for accent elements */
+.glow-green {
+  box-shadow: 0 0 40px rgba(0, 255, 135, 0.15), 0 0 80px rgba(0, 255, 135, 0.05);
+}
+
+/* Stat number styling */
+.stat-number {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--electric) 0%, var(--mid-green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sharp card style */
+.card-sharp {
+  border: 1px solid var(--slate-200);
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-sharp:hover {
+  border-color: var(--mid-green);
+  box-shadow: 0 4px 24px rgba(0, 255, 135, 0.08);
+}
+
+/* Button hover slide — neon slides in from left */
+@layer utilities {
+  .btn-slide {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--electric);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide:hover::before {
+    transform: scaleX(1);
+  }
+
+  .btn-slide:hover {
+    color: var(--dark-green);
+  }
+
+  /* Button hover slide — neon rises from bottom */
+  .btn-slide-up {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide-up::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--electric);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide-up:hover::before {
+    transform: scaleY(1);
+  }
+
+  .btn-slide-up:hover {
+    color: var(--dark-green);
+  }
+
+  /* Button hover slide — white rises from bottom (for electric/neon buttons) */
+  .btn-slide-up-white {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide-up-white::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: white;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-slide-up-white:hover::before {
+    transform: scaleY(1);
+  }
+
+  .btn-slide-up-white:hover {
+    color: var(--dark-green);
+  }
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
