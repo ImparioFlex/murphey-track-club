@@ -258,24 +258,6 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Credential tags */}
-              <div className="flex flex-wrap gap-3 mt-10">
-                {[
-                  "World #1 Coach",
-                  "American Record Holders",
-                  "USATF XC National Champions",
-                  "50+ Trials Qualifiers",
-                  "USATF Level I",
-                  "10+ Years",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="px-4 py-2 border border-white/15 text-xs font-bold tracking-[0.15em] uppercase text-white/60 font-body"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </FadeIn>
           </div>
 
