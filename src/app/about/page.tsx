@@ -322,23 +322,14 @@ export default function AboutPage() {
       </section>
 
       {/* ===== PHOTO DIVIDER ===== */}
-      <section className="relative h-48 md:h-64 overflow-hidden">
+      <section className="relative h-40 md:h-56 overflow-hidden">
         <Image
-          src={images.heroTrack}
-          alt="Runners on the track"
+          src="/images/track-race.jpg"
+          alt="Track lanes at dusk"
           fill
-          className="object-cover"
+          className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-mint/80" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Image
-            src="/logos/grassroots-square.png"
-            alt=""
-            width={80}
-            height={80}
-            className="w-16 md:w-20 h-auto opacity-60"
-          />
-        </div>
+        <div className="absolute inset-0 bg-mint/70" />
       </section>
 
       {/* ===== BOTTOM CTA ===== */}
