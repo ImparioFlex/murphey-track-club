@@ -4,7 +4,7 @@ import GrassDivider from "@/components/GrassDivider";
 import SectionEyebrow from "@/components/SectionEyebrow";
 import FadeIn from "@/components/FadeIn";
 import { images } from "@/lib/images";
-import { ArrowRight, Sun, TreePine, Users, Building2 } from "lucide-react";
+import { ArrowRight, Sun, TreePine, Users, Building2, Instagram, Mail, Phone } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -217,6 +217,31 @@ export default function AboutPage() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-electric/30 via-transparent to-transparent" />
+              </div>
+              <div className="flex items-center gap-4 mt-6">
+                <a
+                  href="https://instagram.com/grassrootseliterunning"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 border border-white/15 flex items-center justify-center text-electric hover:bg-electric hover:text-dark-green transition-colors"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:hayden@grassrootselite.com"
+                  className="w-12 h-12 border border-white/15 flex items-center justify-center text-electric hover:bg-electric hover:text-dark-green transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+                <a
+                  href="tel:+18005551234"
+                  className="w-12 h-12 border border-white/15 flex items-center justify-center text-electric hover:bg-electric hover:text-dark-green transition-colors"
+                  aria-label="Phone"
+                >
+                  <Phone className="w-5 h-5" />
+                </a>
               </div>
             </FadeIn>
             <FadeIn delay={100} className="lg:col-span-3">
