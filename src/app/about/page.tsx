@@ -182,7 +182,7 @@ export default function AboutPage() {
                   <div className="flex items-center gap-4 mb-6">
                     <item.Icon className="w-8 h-8 md:w-10 md:h-10 text-electric shrink-0" strokeWidth={1.2} />
                     <div className="h-[2px] flex-1 bg-gradient-to-r from-mid-green/40 via-electric/20 to-transparent" />
-                    <div className="text-right shrink-0 pr-1">
+                    <div className="text-right shrink-0 pr-3">
                       <p className="text-3xl font-extrabold font-heading italic text-gradient leading-none">
                         {item.stat}
                       </p>
