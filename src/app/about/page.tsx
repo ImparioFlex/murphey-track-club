@@ -4,7 +4,7 @@ import GrassDivider from "@/components/GrassDivider";
 import SectionEyebrow from "@/components/SectionEyebrow";
 import FadeIn from "@/components/FadeIn";
 import { images } from "@/lib/images";
-import { ArrowRight, Sun, TreePine, Users, Building2, Instagram, Mail, Phone } from "lucide-react";
+import { ArrowRight, Sun, TreePine, Users, Building2, Instagram, Mail, Phone, Linkedin, Youtube } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -242,6 +242,24 @@ export default function AboutPage() {
                 >
                   <Phone className="w-5 h-5" />
                 </a>
+                <a
+                  href="https://linkedin.com/in/haydencox"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 border border-white/15 flex items-center justify-center text-electric hover:bg-electric hover:text-dark-green transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://youtube.com/@grassrootselite"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 border border-white/15 flex items-center justify-center text-electric hover:bg-electric hover:text-dark-green transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-5 h-5" />
+                </a>
               </div>
             </FadeIn>
             <FadeIn delay={100} className="lg:col-span-3">
@@ -303,7 +321,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <GrassDivider className="py-4 bg-white" />
+      {/* ===== PHOTO DIVIDER ===== */}
+      <section className="relative h-48 md:h-64 overflow-hidden">
+        <Image
+          src={images.heroTrack}
+          alt="Runners on the track"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-mint/80" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Image
+            src="/logos/grassroots-square.png"
+            alt=""
+            width={80}
+            height={80}
+            className="w-16 md:w-20 h-auto opacity-60"
+          />
+        </div>
+      </section>
 
       {/* ===== BOTTOM CTA ===== */}
       <section className="bg-dark-green py-16 md:py-24 px-6">
