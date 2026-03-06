@@ -329,8 +329,7 @@ export default function AboutPage() {
           alt="Athlete stretching on the track"
           objectPosition="center 60%"
         />
-        <div className="absolute inset-0 bg-mint/50 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-black/10" />
+        <div className="absolute inset-0 bg-[#22c55e]/25" />
       </section>
 
       {/* ===== BOTTOM CTA ===== */}
