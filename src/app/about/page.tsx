@@ -4,7 +4,6 @@ import GrassDivider from "@/components/GrassDivider";
 import SectionEyebrow from "@/components/SectionEyebrow";
 import FadeIn from "@/components/FadeIn";
 import { images } from "@/lib/images";
-import ParallaxImage from "@/components/ParallaxImage";
 import { ArrowRight, Sun, TreePine, Users, Building2, Instagram, Mail, Phone, Linkedin, Youtube } from "lucide-react";
 
 export default function AboutPage() {
@@ -324,10 +323,11 @@ export default function AboutPage() {
 
       {/* ===== PHOTO DIVIDER ===== */}
       <section className="relative h-56 md:h-72 overflow-hidden">
-        <ParallaxImage
+        <Image
           src="/images/track-stretch.jpg"
           alt="Athlete stretching on the track"
-          objectPosition="center 60%"
+          fill
+          className="object-cover object-[center_60%]"
         />
         <div className="absolute inset-0 bg-[#22c55e]/25" />
       </section>
