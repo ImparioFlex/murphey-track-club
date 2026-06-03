@@ -1,36 +1,47 @@
-# Grassroots Elite Website
+# Murphey Track Club Website
 
 ## Tech Stack
-- Next.js (App Router) + TypeScript + Tailwind CSS v4
+- Next.js 16 (App Router) + TypeScript + Tailwind CSS v4
 - Fonts: Barlow Condensed (headings) + DM Sans (body)
 - Icons: Lucide React
-- Images: Unsplash (URLs in `src/lib/images.ts`)
+- Images: Local in `/public/images/` (from Grassroots Elite starter, swap for real MTC photos)
 
 ## Local Development
 ```bash
-cd "Grassroots Running/grassroots-elite"
-npm run dev    # Dev server on port 46283
+cd "Impario Flex/demos/murphey-track-club"
+npm run dev    # Dev server on port 46500
 npm run build  # Production build
 ```
-Local dev server runs on: http://localhost:46283
+Local dev server runs on: http://localhost:46500
 
 ## Key Files
 - `src/app/globals.css` — Color tokens and Tailwind theme
-- `src/lib/images.ts` — All Unsplash image URLs (single file to swap images)
-- `src/components/GrassDivider.tsx` — Signature grass blade SVG section divider
+- `src/lib/images.ts` — All image paths (single file to swap images)
 - `src/components/Navbar.tsx` — Sticky nav with mobile menu
-- `src/components/Footer.tsx` — Site footer
+- `src/components/Footer.tsx` — Site footer with contact info
+- `src/components/SponsorStrip.tsx` — Scrolling sponsor marquee
 
 ## Color Palette
-- Dark Green: #1a3d2b | Forest Green: #1e5c38 | Mid Green: #2d8a4e
-- Neon Green: #6dff6d | Light Neon: #a8ff78
-- Off White: #f8faf8 | Mint BG: #f0f7f2 | Light Grey: #e8ede9
+- Charcoal: #1A1A1E | Charcoal Mid: #3D3D42
+- Orange: #F5901B | Orange Dark: #D4770A | Orange Light: #FFB347
+- Cream: #FFF8F0 | Cream Dark: #FFE8CC
+- Deep: #0D0D0F (near black for dark sections)
 
 ## Pages
-- `/` — Home (hero, pillars, story, athletes teaser, coach, gear, sponsors, CTA)
-- `/about` — Our story, Why Greenville, Coach bio, Inspirations
-- `/train` — Elite group, Community squad, Weekly schedule
-- `/athletes` — 4 fictional athlete profiles
-- `/camps` — Elite Development Camp + Community Camp
-- `/gear` — VS Athletics team store
-- `/join` — 3-path join forms (Community, Elite, Camp)
+- `/` — Home (hero, stats, pillars, mission, schedule preview, training info, sponsors, CTA)
+- `/about` — History, mission, community impact, Ed Murphey legacy
+- `/coaches` — 10 coaching staff with roles
+- `/schedule` — Training schedule + 2026 competition calendar
+- `/join` — Registration details, $100 fee, link to registration
+- `/donate` — Individual + corporate donation options
+- `/meet` — Ed Murphey Classic info + links back to edmurpheyclassic.com
+
+## Key Content
+- Tagline: "Keep Our Kids On The Right Track"
+- Location: Halle Stadium, Memphis, TN
+- Training: Mon/Tue/Thu 5:30-7:00 PM, starts June 1
+- Fee: $100 (USATF membership + uniform)
+- Ages: Elementary, middle, high school
+- Executive Director: Alisa Seymour
+- Founder: Eddie Murphey
+- AAU + USATF sanctioned, Est. 2023

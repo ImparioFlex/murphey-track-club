@@ -1,200 +1,171 @@
-"use client";
-
 import Link from "next/link";
-import FadeIn from "@/components/FadeIn";
+import { Check, Calendar, MapPin, DollarSign, ArrowRight } from "lucide-react";
 import SectionEyebrow from "@/components/SectionEyebrow";
-import { Users, Award, CalendarDays } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
+
+const includes = [
+  "USATF membership",
+  "Club uniform",
+  "Coaching 3 days per week at Halle Stadium",
+  "Access to all sanctioned competitions",
+  "Free coaching clinics",
+  "Part of a supportive team community",
+];
 
 export default function JoinPage() {
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-  };
-
-  const inputClasses =
-    "w-full px-4 py-3 border border-slate-200 text-base font-body focus:outline-none focus:ring-2 focus:ring-mid-green/30 focus:border-mid-green";
-
   return (
     <>
-      {/* ===== HERO TEXT ===== */}
+      {/* ===== HERO ===== */}
       <section className="bg-white pt-24 md:pt-32 pb-16 md:pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
             <SectionEyebrow>Get Involved</SectionEyebrow>
-            <h1 className="text-[clamp(2.5rem,7vw,6rem)] font-extrabold font-heading uppercase text-dark-green tracking-tight leading-[0.9]">
-              Your Next Chapter
+            <h1 className="text-[clamp(2.5rem,7vw,6rem)] font-extrabold font-heading uppercase text-charcoal tracking-tight leading-[0.9]">
+              Register Your
               <br />
-              Starts Now
+              <span className="text-orange">Athlete</span>
             </h1>
-            <p className="text-slate-600 font-body text-lg leading-relaxed mt-8 max-w-2xl mx-auto">
-              Three paths. One community. Whether you are chasing a national
-              title, looking for training partners, or ready to level up at camp,
-              there is a place for you here.
+            <p className="text-gray-700 font-body text-lg leading-relaxed mt-8 max-w-2xl mx-auto">
+              Open to elementary, middle, and high school athletes in Memphis
+              and surrounding areas. Season begins June 1st at Halle Stadium.
             </p>
           </FadeIn>
         </div>
       </section>
 
-      {/* ===== THREE PATH CARDS ===== */}
-      <section className="bg-white pb-20 md:pb-32 px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-8 max-w-7xl mx-auto items-start">
-          {/* Card 1 — Community Squad */}
-          <FadeIn delay={0}>
-            <div className="border border-slate-200 border-t-2 border-t-mid-green bg-white p-6 md:p-10 flex flex-col">
-              <Users
-                className="w-10 h-10 text-mid-green mb-6"
-                strokeWidth={1.5}
-              />
-              <h2 className="font-heading font-extrabold text-2xl uppercase tracking-wide text-dark-green mb-3">
-                Community Squad
-              </h2>
-              <p className="text-slate-600 font-body text-base leading-relaxed mb-8">
-                Open to all levels. Show up, work hard, belong. No application
-                needed. Just bring your shoes and your commitment.
-              </p>
-              <form onSubmit={handleSubmit} className="space-y-4 mt-auto">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className={inputClasses}
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="City"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="Running Background"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="How did you hear about us?"
-                  className={inputClasses}
-                />
-                <button
-                  type="submit"
-                  className="btn-slide-up bg-dark-green text-white w-full px-8 py-4 text-sm font-bold uppercase tracking-wider font-body mt-2"
-                >
-                  Sign Up
-                </button>
-              </form>
-            </div>
-          </FadeIn>
+      {/* ===== REGISTRATION DETAILS ===== */}
+      <section className="bg-cream py-20 md:py-28 px-6">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <FadeIn>
+              <div>
+                <SectionEyebrow>Registration Details</SectionEyebrow>
+                <h2 className="text-4xl md:text-5xl font-extrabold font-heading uppercase text-charcoal leading-[0.92] mb-6 md:mb-10">
+                  One Fee.
+                  <br />
+                  Everything
+                  <br />
+                  <span className="text-orange">Included.</span>
+                </h2>
 
-          {/* Card 2 — Elite Group */}
-          <FadeIn delay={100}>
-            <div className="border border-slate-200 border-t-2 border-t-electric bg-white p-6 md:p-10 flex flex-col">
-              <Award
-                className="w-10 h-10 text-electric mb-6"
-                strokeWidth={1.5}
-              />
-              <h2 className="font-heading font-extrabold text-2xl uppercase tracking-wide text-dark-green mb-3">
-                Elite Group
-              </h2>
-              <p className="text-slate-600 font-body text-base leading-relaxed mb-8">
-                For post-collegiate and open athletes with serious competitive
-                goals. Applications are reviewed personally by Coach Hayden.
-              </p>
-              <form onSubmit={handleSubmit} className="space-y-4 mt-auto">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className={inputClasses}
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="Event(s)"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="Current PRs"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="College / post-collegiate history"
-                  className={inputClasses}
-                />
-                <input
-                  type="text"
-                  placeholder="Goals"
-                  className={inputClasses}
-                />
-                <textarea
-                  placeholder="Why Grassroots Elite?"
-                  rows={3}
-                  className={inputClasses}
-                />
-                <button
-                  type="submit"
-                  className="btn-slide-up-dark bg-electric text-dark-green w-full px-8 py-4 text-sm font-bold uppercase tracking-wider font-body mt-2"
-                >
-                  Apply Now
-                </button>
-              </form>
-            </div>
-          </FadeIn>
+                <div className="border-t border-gray-200 pt-8 mb-10">
+                  <p className="stat-number text-5xl md:text-7xl text-charcoal mb-1">
+                    $100
+                  </p>
+                  <p className="text-sm text-gray-500 font-body uppercase tracking-wider font-semibold">
+                    Competition Fee
+                  </p>
+                </div>
 
-          {/* Card 3 — Sign Up for a Camp */}
-          <FadeIn delay={200}>
-            <div className="border border-slate-200 border-t-2 border-t-forest-green bg-white p-6 md:p-10 flex flex-col">
-              <CalendarDays
-                className="w-10 h-10 text-forest-green mb-6"
-                strokeWidth={1.5}
-              />
-              <h2 className="font-heading font-extrabold text-2xl uppercase tracking-wide text-dark-green mb-3">
-                Sign Up for a Camp
-              </h2>
-              <p className="text-slate-600 font-body text-base leading-relaxed mb-8">
-                Join us for one of our annual camps. Whether you are an elite
-                competitor or running your first group workout, there is a camp
-                built for you.
-              </p>
-              <div className="mt-auto">
-                <Link
-                  href="/camps"
-                  className="btn-slide-up border-2 border-dark-green text-dark-green w-full px-8 py-4 text-sm font-bold uppercase tracking-wider font-body text-center block"
-                >
-                  View Camps
-                </Link>
+                <div className="space-y-3 mb-10">
+                  <div className="flex items-center gap-3 text-gray-700 font-body">
+                    <Calendar className="w-5 h-5 text-orange flex-shrink-0" strokeWidth={1.5} />
+                    <span>Season begins <strong className="text-charcoal">June 1st</strong></span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700 font-body">
+                    <MapPin className="w-5 h-5 text-orange flex-shrink-0" strokeWidth={1.5} />
+                    <span><strong className="text-charcoal">Halle Stadium</strong>, Memphis, TN</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700 font-body">
+                    <DollarSign className="w-5 h-5 text-orange flex-shrink-0" strokeWidth={1.5} />
+                    <span>Covers USATF membership + club uniform</span>
+                  </div>
+                </div>
+
+                <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-charcoal font-body mb-4">
+                  What&apos;s Included
+                </h3>
+                <ul className="space-y-3 mb-10">
+                  {includes.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-gray-700 font-body leading-relaxed">
+                      <Check className="w-5 h-5 text-orange mt-0.5 shrink-0" strokeWidth={1.5} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
+
+            <FadeIn delay={100}>
+              <div className="border border-gray-200 border-t-4 border-t-orange bg-white p-6 md:p-10">
+                <h3 className="font-heading font-extrabold text-2xl uppercase tracking-wide text-charcoal mb-3">
+                  Register Now
+                </h3>
+                <p className="text-gray-700 font-body text-base leading-relaxed mb-8">
+                  Click below to fill out the registration form. You&apos;ll
+                  need your athlete&apos;s information and a parent/guardian
+                  contact.
+                </p>
+
+                <a
+                  href="https://edmurpheyclassic.com/club-details"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-slide-up-dark bg-orange text-charcoal w-full px-8 py-4 text-base font-bold uppercase tracking-wider font-body text-center block mb-4"
+                >
+                  Register Now
+                </a>
+
+                <p className="text-sm text-gray-500 font-body text-center">
+                  You&apos;ll be taken directly to the registration form.
+                </p>
+
+                <div className="mt-10 pt-8 border-t border-gray-200">
+                  <h4 className="text-sm font-bold tracking-[0.15em] uppercase text-charcoal font-body mb-4">
+                    Questions?
+                  </h4>
+                  <div className="space-y-2 text-gray-700 font-body">
+                    <p>
+                      <strong className="text-charcoal">Alisa Seymour</strong> (Executive Director)
+                    </p>
+                    <p>
+                      <a href="mailto:agseymour1913@gmail.com" className="text-orange hover:underline">
+                        agseymour1913@gmail.com
+                      </a>
+                    </p>
+                    <p className="pt-2">
+                      <strong className="text-charcoal">Eddie Murphey</strong> (Founder)
+                    </p>
+                    <p>
+                      <a href="mailto:eddie@edmurpheyclassic.com" className="text-orange hover:underline">
+                        eddie@edmurpheyclassic.com
+                      </a>
+                    </p>
+                    <p>
+                      <a href="tel:901-828-6745" className="text-orange hover:underline">
+                        901-828-6745
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
-      {/* ===== IMPARIO FLEX SPONSOR NOTE ===== */}
-      <section className="bg-slate-100 py-16 px-6">
-        <FadeIn>
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-sm text-slate-400 font-body leading-relaxed">
-              Grassroots Elite is proudly supported by{" "}
-              <a
-                href="https://imparioflex.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-forest-green hover:underline"
-              >
-                Impario Flex
-              </a>
-              , a technology and automation agency specializing in web
-              development, CRM automation, and digital systems for businesses
-              ready to grow.
+      {/* ===== GEAR ===== */}
+      <section className="bg-white py-16 md:py-20 px-6">
+        <div className="mx-auto max-w-4xl text-center">
+          <FadeIn>
+            <SectionEyebrow>Official Gear</SectionEyebrow>
+            <h2 className="text-3xl md:text-5xl font-extrabold font-heading uppercase text-charcoal leading-[0.92] mb-6">
+              Rep The Club.
+            </h2>
+            <p className="text-gray-700 font-body leading-relaxed max-w-xl mx-auto mb-8">
+              Hoodies, hats, travel mugs, and more. All proceeds support local
+              youth programs.
             </p>
-          </div>
-        </FadeIn>
+            <a
+              href="https://edmurpheyclassic.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-slide-up inline-flex items-center gap-2 px-10 py-4 bg-charcoal text-white text-base font-bold uppercase tracking-wider font-body"
+            >
+              Shop the Store <ArrowRight className="w-4 h-4" />
+            </a>
+          </FadeIn>
+        </div>
       </section>
     </>
   );

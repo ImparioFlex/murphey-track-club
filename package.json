@@ -1,9 +1,9 @@
 {
-  "name": "grassroots-elite",
+  "name": "murphey-track-club",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 46283",
+    "dev": "next dev --port 46500",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

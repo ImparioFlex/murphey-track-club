@@ -8,11 +8,10 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "/about" },
-  { label: "Train", href: "/train" },
-  { label: "Grassroots Elite", href: "/athletes" },
-  { label: "Camps", href: "/camps" },
-  { label: "Gear", href: "/gear" },
-  { label: "Unseeded", href: "/unseeded" },
+  { label: "Coaches", href: "/coaches" },
+  { label: "Schedule", href: "/schedule" },
+  { label: "Donate", href: "/donate" },
+  { label: "The Classic", href: "/meet" },
 ];
 
 export default function Navbar() {
@@ -30,24 +29,30 @@ export default function Navbar() {
     <>
       <nav
         className={`sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b transition-all duration-300 ${
-          scrolled ? "border-slate-200 shadow-sm" : "border-transparent"
+          scrolled ? "border-gray-200 shadow-sm" : "border-transparent"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex h-20 items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
+            <Link href="/" className="flex-shrink-0 flex items-center gap-3">
               <Image
-                src="/logos/grassroots-wordmark.png"
-                alt="Grassroots"
-                width={220}
-                height={70}
-                className="h-14 w-auto"
+                src="/logos/mtc-logo-new.png"
+                alt="Murphey Track Club"
+                width={56}
+                height={56}
+                className="h-12 w-12 object-contain"
                 priority
               />
+              <div className="hidden sm:block">
+                <p className="text-lg font-extrabold font-heading uppercase text-charcoal leading-none tracking-wide">
+                  Murphey Track Club
+                </p>
+                <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-orange font-body">
+                  Memphis, TN
+                </p>
+              </div>
             </Link>
 
-            {/* Desktop nav */}
             <div className="hidden lg:flex items-center gap-2">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
@@ -57,8 +62,8 @@ export default function Navbar() {
                     href={link.href}
                     className={`px-4 py-2 text-sm font-bold tracking-wide uppercase font-body transition-all border-b-2 ${
                       isActive
-                        ? "border-electric text-dark-green"
-                        : "border-transparent text-dark-green hover:border-mid-green/40 hover:text-forest-green"
+                        ? "border-orange text-charcoal"
+                        : "border-transparent text-charcoal hover:border-orange/40 hover:text-charcoal-mid"
                     }`}
                   >
                     {link.label}
@@ -67,16 +72,15 @@ export default function Navbar() {
               })}
               <Link
                 href="/join"
-                className="btn-slide-up ml-4 px-6 py-2.5 bg-dark-green text-white text-sm font-bold tracking-wide uppercase font-body"
+                className="btn-slide-up ml-4 px-6 py-2.5 bg-charcoal text-white text-sm font-bold tracking-wide uppercase font-body"
               >
-                Join the Movement
+                Join the Club
               </Link>
             </div>
 
-            {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(true)}
-              className="lg:hidden p-2 text-dark-green"
+              className="lg:hidden p-2 text-charcoal"
               aria-label="Open menu"
             >
               <Menu className="w-7 h-7" />
@@ -85,22 +89,22 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] bg-white flex flex-col">
-          <div className="flex items-center justify-between px-6 h-20 border-b border-slate-200">
-            <Link href="/" onClick={() => setMobileOpen(false)}>
+          <div className="flex items-center justify-between px-6 h-20 border-b border-gray-200">
+            <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-3">
               <Image
-                src="/logos/grassroots-wordmark.png"
-                alt="Grassroots"
-                width={200}
-                height={60}
-                className="h-12 w-auto"
+                src="/logos/mtc-logo-new.png"
+                alt="Murphey Track Club"
+                width={48}
+                height={48}
+                className="h-10 w-10 object-contain"
               />
+              <span className="text-lg font-extrabold font-heading uppercase text-charcoal">MTC</span>
             </Link>
             <button
               onClick={() => setMobileOpen(false)}
-              className="p-2 text-dark-green"
+              className="p-2 text-charcoal"
               aria-label="Close menu"
             >
               <X className="w-7 h-7" />
@@ -116,8 +120,8 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className={`text-2xl md:text-3xl font-extrabold font-heading uppercase tracking-wide transition-colors ${
                     isActive
-                      ? "text-electric"
-                      : "text-dark-green hover:text-forest-green"
+                      ? "text-orange"
+                      : "text-charcoal hover:text-charcoal-mid"
                   }`}
                 >
                   {link.label}
@@ -127,9 +131,9 @@ export default function Navbar() {
             <Link
               href="/join"
               onClick={() => setMobileOpen(false)}
-              className="btn-slide-up mt-4 px-10 py-4 bg-dark-green text-white text-xl font-bold uppercase font-heading tracking-wider"
+              className="btn-slide-up mt-4 px-10 py-4 bg-charcoal text-white text-xl font-bold uppercase font-heading tracking-wider"
             >
-              Join the Movement
+              Join the Club
             </Link>
           </div>
         </div>

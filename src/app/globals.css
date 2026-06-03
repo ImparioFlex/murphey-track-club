@@ -2,41 +2,43 @@
 
 :root {
   --black: #0a0a0a;
-  --deep: #051b0e;
-  --dark-green: #0d2818;
-  --forest-green: #166534;
-  --mid-green: #22c55e;
-  --electric: #00ff87;
-  --mint: #f0fdf4;
-  --mint-dark: #dcfce7;
+  --deep: #0D0D0F;
+  --charcoal: #1A1A1E;
+  --charcoal-mid: #3D3D42;
+  --orange: #F5901B;
+  --orange-dark: #D4770A;
+  --orange-light: #FFB347;
+  --cream: #FFF8F0;
+  --cream-dark: #FFE8CC;
   --white: #ffffff;
-  --slate-900: #0f172a;
-  --slate-600: #475569;
-  --slate-400: #94a3b8;
-  --slate-200: #e2e8f0;
-  --slate-100: #f1f5f9;
+  --gray-700: #4A4A4E;
+  --gray-500: #6B6B70;
+  --gray-400: #94949A;
+  --gray-200: #E2E2E6;
+  --gray-100: #F1F1F3;
 
-  --font-heading: var(--font-barlow-condensed);
+  --font-heading: var(--font-bebas-neue);
   --font-body: var(--font-dm-sans);
 }
 
 @theme inline {
   --color-black: var(--black);
   --color-deep: var(--deep);
-  --color-dark-green: var(--dark-green);
-  --color-forest-green: var(--forest-green);
-  --color-mid-green: var(--mid-green);
-  --color-electric: var(--electric);
-  --color-mint: var(--mint);
-  --color-mint-dark: var(--mint-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-mid: var(--charcoal-mid);
+  --color-orange: var(--orange);
+  --color-orange-dark: var(--orange-dark);
+  --color-orange-light: var(--orange-light);
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
   --color-white: var(--white);
-  --color-slate-900: var(--slate-900);
-  --color-slate-600: var(--slate-600);
-  --color-slate-400: var(--slate-400);
-  --color-slate-200: var(--slate-200);
-  --color-slate-100: var(--slate-100);
+  --color-gray-700: var(--gray-700);
+  --color-gray-500: var(--gray-500);
+  --color-gray-400: var(--gray-400);
+  --color-gray-200: var(--gray-200);
+  --color-gray-100: var(--gray-100);
 
-  --font-heading: var(--font-barlow-condensed);
+  --font-heading: var(--font-bebas-neue);
   --font-body: var(--font-dm-sans);
 }
 
@@ -46,13 +48,12 @@ html {
 
 body {
   font-family: var(--font-body), system-ui, sans-serif;
-  color: var(--slate-900);
+  color: var(--charcoal);
   background: #ffffff;
   font-size: clamp(16px, 2.5vw, 18px);
   line-height: 1.7;
 }
 
-/* Fade-in animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -64,12 +65,10 @@ body {
   transform: translateY(0);
 }
 
-/* Electric glow for accent elements */
-.glow-green {
-  box-shadow: 0 0 40px rgba(0, 255, 135, 0.15), 0 0 80px rgba(0, 255, 135, 0.05);
+.glow-orange {
+  box-shadow: 0 0 40px rgba(245, 144, 27, 0.15), 0 0 80px rgba(245, 144, 27, 0.05);
 }
 
-/* Stat number styling */
 .stat-number {
   font-family: var(--font-heading);
   font-weight: 800;
@@ -77,55 +76,25 @@ body {
   line-height: 1;
 }
 
-/* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, var(--electric) 0%, var(--mid-green) 100%);
+  background: linear-gradient(135deg, var(--orange-light) 0%, var(--orange) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Sharp card style */
 .card-sharp {
-  border: 1px solid var(--slate-200);
+  border: 1px solid var(--gray-200);
   background: white;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .card-sharp:hover {
-  border-color: var(--mid-green);
-  box-shadow: 0 4px 24px rgba(0, 255, 135, 0.08);
+  border-color: var(--orange);
+  box-shadow: 0 4px 24px rgba(245, 144, 27, 0.08);
 }
 
-/* Button hover slide — neon slides in from left */
 @layer utilities {
-  .btn-slide {
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    transition: color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .btn-slide::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background: var(--electric);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-
-  .btn-slide:hover::before {
-    transform: scaleX(1);
-  }
-
-  .btn-slide:hover {
-    color: var(--dark-green);
-  }
-
-  /* Button hover slide — neon rises from bottom */
   .btn-slide-up {
     position: relative;
     overflow: hidden;
@@ -138,7 +107,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: var(--electric);
+    background: var(--orange-light);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -149,10 +118,9 @@ body {
   }
 
   .btn-slide-up:hover {
-    color: var(--dark-green);
+    color: var(--charcoal);
   }
 
-  /* Button hover slide — white rises from bottom (for electric/neon buttons) */
   .btn-slide-up-white {
     position: relative;
     overflow: hidden;
@@ -176,10 +144,9 @@ body {
   }
 
   .btn-slide-up-white:hover {
-    color: var(--dark-green);
+    color: var(--charcoal);
   }
 
-  /* Button hover slide — dark green rises from bottom (for buttons on light backgrounds) */
   .btn-slide-up-dark {
     position: relative;
     overflow: hidden;
@@ -192,7 +159,7 @@ body {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: var(--dark-green);
+    background: var(--charcoal);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -207,7 +174,6 @@ body {
   }
 }
 
-/* Marquee animation */
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

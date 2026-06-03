@@ -1,16 +1,28 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Zap, Users, Mountain, ArrowRight } from "lucide-react";
+import { Trophy, Users, Heart, ArrowRight, Calendar, MapPin } from "lucide-react";
 import SectionEyebrow from "@/components/SectionEyebrow";
 import SponsorStrip from "@/components/SponsorStrip";
 import CTABanner from "@/components/CTABanner";
+import InstagramFeed from "@/components/InstagramFeed";
 import FadeIn from "@/components/FadeIn";
 import { images } from "@/lib/images";
 
 const stats = [
-  { number: "30+", label: "ATHLETES", sub: "Elite and community runners" },
-  { number: "12", label: "OTQ / NATIONAL QUALIFIERS", sub: "And counting" },
-  { number: "1", label: "MISSION", sub: "Keep the dream alive post-college" },
+  { number: "250+", label: "ATHLETES", sub: "Across 3 training sites" },
+  { number: "100%", label: "FREE", sub: "Coaching, uniforms & shoes" },
+  { number: "20+", label: "NATIONAL QUALIFIERS", sub: "2024–2025 season" },
+];
+
+const schedule = [
+  { date: "Jun 1-5", event: "Shelby Metro T&F Camp", location: "Halle Stadium" },
+  { date: "Jun 6", event: "Fast & Furious Invitational", location: "Bartlett HS" },
+  { date: "Jun 13", event: "USATF TN Championships", location: "Bartlett HS" },
+  { date: "Jun 18", event: "Orange & White Inter Squad", location: "Halle Stadium" },
+  { date: "Jun 24-27", event: "USATF Youth Championships", location: "Huntsville, AL" },
+  { date: "Jul 10-12", event: "USATF JO Region Championships", location: "Collierville HS" },
+  { date: "Jul 18-20", event: "U20 USATF Championships", location: "Eugene, OR" },
+  { date: "Jul 27 - Aug 2", event: "USATF Junior Olympics Championships", location: "Cerritos, CA" },
 ];
 
 export default function HomePage() {
@@ -20,34 +32,41 @@ export default function HomePage() {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <Image
           src={images.hero}
-          alt="Runners on the track at dawn"
+          alt="Youth athletes racing on the track"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-dark-green/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/80" />
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <p className="text-sm md:text-base font-bold tracking-[0.25em] uppercase text-electric mb-8 font-body">
-            Greenville, SC Running Club
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logos/mtc-logo-new.png"
+              alt="MTC Logo"
+              width={120}
+              height={120}
+              className="w-24 md:w-32 h-auto"
+            />
+          </div>
+          <p className="text-sm md:text-base font-bold tracking-[0.25em] uppercase text-orange mb-6 font-body">
+            Memphis, TN &bull; AAU &amp; USATF Sanctioned
           </p>
-          <h1 className="text-[clamp(4rem,10vw,9rem)] leading-[0.88] font-extrabold font-heading uppercase text-white mb-8">
-            Show Up.
+          <h1 className="text-[clamp(3rem,9vw,8rem)] leading-[0.88] font-extrabold font-heading uppercase text-white mb-8">
+            Keep Our Kids
             <br />
-            Run Hard.
-            <br />
-            <span className="text-gradient">Belong.</span>
+            <span className="text-gradient">On The Right Track</span>
           </h1>
           <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
-            Elite coaching from a coach of American Record holders and national
-            champions. A community that actually shows up. Based in one of the
-            South&apos;s fastest-growing running cities.
+            Youth track &amp; field club serving elementary, middle, and high
+            school athletes in Memphis and the surrounding areas. Building
+            champions on and off the track.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/join"
-              className="btn-slide-up-white px-10 py-4 bg-electric text-dark-green text-base font-bold uppercase tracking-wider font-body"
+              className="btn-slide-up-white px-10 py-4 bg-orange text-charcoal text-base font-bold uppercase tracking-wider font-body"
             >
-              Join the Club
+              Register Your Athlete
             </Link>
             <Link
               href="/about"
@@ -60,12 +79,12 @@ export default function HomePage() {
       </section>
 
       {/* ===== STATS BAR ===== */}
-      <section className="bg-dark-green py-10 md:py-16 px-6">
+      <section className="bg-charcoal py-10 md:py-16 px-6">
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x md:divide-white/10">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center px-4 md:px-8">
-                <p className="stat-number text-4xl md:text-6xl text-electric">
+                <p className="stat-number text-4xl md:text-6xl text-orange">
                   {stat.number}
                 </p>
                 <p className="text-xs font-bold tracking-[0.25em] uppercase text-white/60 font-body mt-3">
@@ -80,62 +99,61 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== WHAT WE ARE ===== */}
+      {/* ===== THREE PILLARS ===== */}
       <section className="bg-white py-20 md:py-32 px-6">
         <div className="mx-auto max-w-6xl">
           <FadeIn>
             <div className="max-w-3xl">
-              <SectionEyebrow>Why Grassroots Elite</SectionEyebrow>
-              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-dark-green leading-[0.92] mb-8">
-                Not a Joggers&apos; Club.
+              <SectionEyebrow>Why Murphey Track Club</SectionEyebrow>
+              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-charcoal leading-[0.92] mb-6 md:mb-10">
+                More Than
                 <br />
-                A Running Team.
+                A Track Club.
               </h2>
-              <p className="text-lg text-slate-600 font-body leading-relaxed max-w-2xl">
-                This is for people who set their alarm before sunrise because they
-                have something to prove. People who want world-class coaching,
-                teammates who push them, and a city that makes training feel like
-                living.
+              <p className="text-lg text-gray-700 font-body leading-relaxed max-w-2xl">
+                We develop young athletes through structured coaching,
+                competitive opportunities, and a community that believes every
+                kid deserves a chance to discover what they are capable of.
               </p>
             </div>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-12 md:mt-20 border border-slate-200 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 mt-12 md:mt-20 border border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200">
             {[
               {
-                icon: Zap,
-                title: "Elite-Level Coaching",
-                text: "Your coach has coached a World #1, American Record holders, and dozens of Olympic Trials qualifiers. Same coach. Your plan.",
-                link: "/join",
-                cta: "Grassroots Elite",
+                icon: Trophy,
+                title: "Competition",
+                text: "From local invitationals to USATF Junior Olympics. Our athletes compete at every level, from Shelby County to the national stage in California.",
+                link: "/schedule",
+                cta: "See Schedule",
               },
               {
                 icon: Users,
-                title: "Community That Shows Up",
-                text: "Tuesday track. Thursday tempo. Saturday long run. This is not a group text. This is a team that meets at 6am because they want to be there.",
-                link: "/train",
-                cta: "Train",
+                title: "Coaching",
+                text: "10 dedicated coaches led by Executive Director Alisa Seymour. Structured training Monday, Tuesday, and Thursday at Halle Stadium.",
+                link: "/coaches",
+                cta: "Meet the Coaches",
               },
               {
-                icon: Mountain,
-                title: "Greenville, SC",
-                text: "220+ sunny days. The Swamp Rabbit Trail. Furman's campus. Paris Mountain. A city that runs, surrounded by a region that races.",
+                icon: Heart,
+                title: "Community",
+                text: "All proceeds go to local youth programs. Free coaching clinics, donated team tents to 16 schools, and the MSCS Summer Metro Camp.",
                 link: "/about",
-                cta: "About",
+                cta: "Our Impact",
               },
             ].map((item) => (
               <FadeIn key={item.title} className="h-full">
-                <div className="p-6 md:p-10 lg:p-12 hover:bg-mint transition-colors duration-300 h-full flex flex-col">
-                  <item.icon className="w-6 h-6 md:w-8 md:h-8 text-mid-green mb-4 md:mb-6" strokeWidth={1.5} />
-                  <h3 className="text-xl font-extrabold font-heading uppercase text-dark-green mb-4">
+                <div className="p-6 md:p-10 lg:p-12 hover:bg-cream transition-colors duration-300 h-full flex flex-col">
+                  <item.icon className="w-6 h-6 md:w-8 md:h-8 text-orange mb-4 md:mb-6" strokeWidth={1.5} />
+                  <h3 className="text-xl font-extrabold font-heading uppercase text-charcoal mb-4">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600 font-body leading-relaxed mb-6">
+                  <p className="text-gray-700 font-body leading-relaxed mb-6">
                     {item.text}
                   </p>
                   <Link
                     href={item.link}
-                    className="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider font-body text-dark-green hover:text-mid-green transition-colors"
+                    className="mt-auto inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider font-body text-charcoal hover:text-orange transition-colors"
                   >
                     {item.cta} <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -146,40 +164,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== THE STORY ===== */}
-      <section className="bg-mint py-20 md:py-32 px-6">
+      {/* ===== INSTAGRAM FEED ===== */}
+      <InstagramFeed />
+
+      {/* ===== THE MISSION ===== */}
+      <section className="bg-cream py-20 md:py-32 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn>
               <div>
-                <SectionEyebrow>The Story</SectionEyebrow>
-                <h2 className="text-4xl md:text-5xl font-extrabold font-heading uppercase text-dark-green leading-[0.92] mb-8">
-                  Your Best
+                <SectionEyebrow>The Mission</SectionEyebrow>
+                <h2 className="text-4xl md:text-5xl font-extrabold font-heading uppercase text-charcoal leading-[0.92] mb-6 md:mb-10">
+                  Every Kid
                   <br />
-                  Miles Are
+                  Deserves A
                   <br />
-                  <span className="text-forest-green">Still Ahead.</span>
+                  <span className="text-orange">Starting Line.</span>
                 </h2>
-                <div className="space-y-5 text-slate-600 font-body leading-relaxed">
+                <div className="space-y-6 text-gray-700 font-body leading-relaxed">
                   <p>
-                    For so many athletes, the final college race feels like the end.
-                    The structure disappears. The team dissolves. And the dream
-                    quietly fades.
+                    The Murphey Track Club was established in 2023 to serve
+                    youth athletes in Memphis and surrounding areas. We hold
+                    membership with both the Amateur Athletic Union (AAU) and
+                    USA Track &amp; Field (USATF).
                   </p>
-                  <p className="text-dark-green font-semibold text-lg">
-                    Grassroots Elite exists to prove that wrong.
+                  <p className="text-charcoal font-semibold text-lg">
+                    ALL proceeds from merchandise, concessions, registration
+                    fees, and tickets go to LOCAL YOUTH PROGRAMS.
                   </p>
                   <p>
-                    We are for the runner who is not done yet. The one still
-                    chasing standards, still stacking mileage, still refusing to let
-                    the fire go out. And we are for the everyday runner who wants
-                    to train in a fast, supportive environment and be part of
-                    something real.
+                    From free coaching clinics to donated team tents for Shelby
+                    County schools, everything we do is designed to give young
+                    athletes the structure, coaching, and competitive
+                    opportunities they need to succeed.
                   </p>
                 </div>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 mt-8 text-forest-green font-semibold font-body hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 mt-8 text-orange font-semibold font-body hover:gap-3 transition-all"
                 >
                   Read the full story <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -189,7 +211,7 @@ export default function HomePage() {
               <div className="relative h-[500px] overflow-hidden">
                 <Image
                   src={images.storyPhoto}
-                  alt="Runner at sunset"
+                  alt="Youth athlete training"
                   fill
                   className="object-cover"
                 />
@@ -199,161 +221,127 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ===== FEATURED ATHLETES ===== */}
+      {/* ===== UPCOMING COMPETITIONS ===== */}
       <section className="bg-white py-20 md:py-32 px-6">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <FadeIn>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-16">
-              <div>
-                <SectionEyebrow>Athletes</SectionEyebrow>
-                <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-dark-green leading-[0.92]">
-                  Real People.
-                  <br />
-                  Real PRs.
-                </h2>
-              </div>
+            <div className="text-center mb-10 md:mb-16">
+              <SectionEyebrow>2026 Season</SectionEyebrow>
+              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-charcoal leading-[0.92]">
+                Upcoming Competitions
+              </h2>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={100}>
+            <div className="overflow-hidden border border-gray-200">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-charcoal">
+                    <th className="px-3 md:px-6 py-3 md:py-4 text-left text-xs font-bold tracking-[0.15em] uppercase text-white font-body">
+                      Date
+                    </th>
+                    <th className="px-3 md:px-6 py-3 md:py-4 text-left text-xs font-bold tracking-[0.15em] uppercase text-white font-body">
+                      Event
+                    </th>
+                    <th className="px-3 md:px-6 py-3 md:py-4 text-left text-xs font-bold tracking-[0.15em] uppercase text-white font-body hidden md:table-cell">
+                      Location
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="font-body text-base">
+                  {schedule.map((row, i) => (
+                    <tr
+                      key={row.event}
+                      className={`border-t border-gray-200 ${
+                        i % 2 === 0 ? "bg-white" : "bg-gray-100"
+                      }`}
+                    >
+                      <td className="px-3 md:px-6 py-3 md:py-5 font-bold text-orange font-heading uppercase tracking-wide whitespace-nowrap">
+                        {row.date}
+                      </td>
+                      <td className="px-3 md:px-6 py-3 md:py-5 text-charcoal font-semibold">
+                        {row.event}
+                      </td>
+                      <td className="px-3 md:px-6 py-3 md:py-5 text-gray-500 hidden md:table-cell">
+                        <span className="inline-flex items-center gap-1">
+                          <MapPin className="w-3.5 h-3.5" /> {row.location}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={200}>
+            <div className="text-center mt-8">
               <Link
-                href="/athletes"
-                className="mt-6 md:mt-0 inline-flex items-center gap-2 text-forest-green font-semibold font-body hover:gap-3 transition-all"
+                href="/schedule"
+                className="inline-flex items-center gap-2 text-orange font-semibold font-body hover:gap-3 transition-all"
               >
-                Meet the team <ArrowRight className="w-4 h-4" />
+                See full schedule <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Marcus Delray",
-                event: "5K / 10K",
-                stat: "14:42 to 13:51",
-                image: images.marcus,
-              },
-              {
-                name: "Claire Whitmore",
-                event: "Marathon",
-                stat: "Olympic Trials Qualifier",
-                image: images.claire,
-              },
-              {
-                name: "Jonah Parrish",
-                event: "Steeplechase",
-                stat: "Cut from college. Top-15 at USATFs.",
-                image: images.jonah,
-              },
-            ].map((athlete, i) => (
-              <FadeIn key={athlete.name} delay={i * 100}>
-                <Link href="/athletes" className="group block">
-                  <div className="relative h-96 overflow-hidden bg-slate-100">
-                    <Image
-                      src={athlete.image}
-                      alt={athlete.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-electric/30 via-electric/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <p className="text-xs font-bold tracking-[0.2em] uppercase text-electric font-body">
-                        {athlete.event}
-                      </p>
-                      <h3 className="text-2xl font-extrabold font-heading uppercase text-white mt-1">
-                        {athlete.name}
-                      </h3>
-                      <p className="text-sm text-white/70 font-body mt-1">
-                        {athlete.stat}
-                      </p>
-                    </div>
-                  </div>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* ===== COACH ===== */}
+      {/* ===== TRAINING INFO ===== */}
       <section className="bg-deep py-20 md:py-32 px-6">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-center">
-            <FadeIn className="lg:col-span-2">
-              <div className="relative h-[480px] overflow-hidden">
-                <Image
-                  src={images.coach}
-                  alt="Coach Hayden Cox"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-electric/30 via-transparent to-transparent" />
-              </div>
-            </FadeIn>
-            <FadeIn delay={100} className="lg:col-span-3">
-              <SectionEyebrow dark>Head Coach</SectionEyebrow>
-              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-8">
-                Hayden Cox
-              </h2>
-              <div className="space-y-5 text-slate-400 font-body leading-relaxed">
-                <p>
-                  Hayden has coached a World #1, American Record holders, USATF
-                  Cross Country National Champions, and dozens of Olympic Trials
-                  qualifiers. With over a decade at the high school, NCAA
-                  Division I, and elite club levels, he brings a rare combination
-                  of analytical precision and genuine care to every training plan.
-                </p>
-                <blockquote className="border-l-2 border-electric pl-4 md:pl-6 text-lg text-white/80 italic">
-                  &ldquo;When you have real community, real coaching, and real
-                  belief in what&apos;s possible, the ceiling just keeps
-                  rising.&rdquo;
-                </blockquote>
-              </div>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 mt-8 text-electric font-semibold font-body hover:gap-3 transition-all"
-              >
-                Full bio <ArrowRight className="w-4 h-4" />
-              </Link>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
-
-      {/* ===== GEAR CALLOUT ===== */}
-      <section className="bg-white py-20 md:py-32 px-6">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <FadeIn>
-              <div>
-                <SectionEyebrow>Official Gear</SectionEyebrow>
-                <h2 className="text-4xl md:text-5xl font-extrabold font-heading uppercase text-dark-green leading-[0.92] mb-8">
-                  Rep the Club.
-                  <br />
-                  Support the Mission.
-                </h2>
-                <p className="text-slate-600 font-body leading-relaxed mb-4">
-                  Official Grassroots Elite kit through VS Athletics. Shop
-                  through our link and get 10% off everything. Another 10% goes
-                  straight back to the club.
+              <SectionEyebrow dark>Training</SectionEyebrow>
+              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6 md:mb-10">
+                Halle Stadium.
+                <br />
+                Three Days
+                <br />
+                <span className="text-gradient">A Week.</span>
+              </h2>
+              <div className="space-y-6 text-gray-400 font-body leading-relaxed">
+                <p>
+                  Training runs Monday, Tuesday, and Thursday from 5:30 PM to
+                  7:00 PM at Halle Stadium. Season begins June 1st.
                 </p>
-                <p className="text-dark-green font-semibold font-body">
-                  You are not just buying gear. You are part of the team.
+                <p className="text-white font-semibold text-lg">
+                  $100 competition fee covers USATF membership and club uniform.
                 </p>
-                <a
-                  href="https://vsathletics.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-slide-up inline-flex items-center gap-2 mt-8 px-10 py-4 bg-dark-green text-white text-base font-bold uppercase tracking-wider font-body"
+                <p>
+                  Open to elementary, middle, and high school athletes in
+                  Memphis and the surrounding areas.
+                </p>
+              </div>
+              <div className="flex items-center gap-6 mt-10">
+                <div className="flex items-center gap-2 text-orange-light font-body">
+                  <Calendar className="w-5 h-5" />
+                  <span className="font-semibold">Mon / Tue / Thu</span>
+                </div>
+                <div className="flex items-center gap-2 text-orange-light font-body">
+                  <MapPin className="w-5 h-5" />
+                  <span className="font-semibold">Halle Stadium</span>
+                </div>
+              </div>
+              <div className="mt-10">
+                <Link
+                  href="/join"
+                  className="btn-slide-up-white inline-flex items-center gap-2 px-10 py-4 bg-orange text-charcoal text-base font-bold uppercase tracking-wider font-body"
                 >
-                  Shop the Store <ArrowRight className="w-4 h-4" />
-                </a>
+                  Register Now <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </FadeIn>
             <FadeIn delay={150}>
-              <div className="relative h-96 overflow-hidden bg-slate-100">
+              <div className="relative h-[520px] overflow-hidden">
                 <Image
-                  src={images.gear}
-                  alt="Running gear and apparel"
+                  src={images.heroTrack}
+                  alt="Athletes training at Halle Stadium"
                   fill
                   className="object-cover"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-deep/40 via-transparent to-transparent" />
               </div>
             </FadeIn>
           </div>

@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, DM_Sans } from "next/font/google";
+import { Bebas_Neue, DM_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import NewsletterBanner from "@/components/NewsletterBanner";
 import "./globals.css";
 
-const barlowCondensed = Barlow_Condensed({
-  variable: "--font-barlow-condensed",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
-  weight: ["700", "800"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -20,11 +19,12 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Grassroots Elite | Greenville, SC Running Club",
+  title: "Murphey Track Club | Memphis, TN",
   description:
-    "The running club you've been looking for. Elite coaching, real community, and the best miles of your life. Based in Greenville, SC.",
+    "Keep Our Kids On The Right Track. Youth track & field club in Memphis, TN. AAU and USATF sanctioned. Training at Halle Stadium.",
   icons: {
-    icon: "/logos/favicon.png",
+    icon: "/logos/favicon.ico",
+    apple: "/logos/apple-touch-icon.png",
   },
 };
 
@@ -36,11 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${barlowCondensed.variable} ${dmSans.variable} antialiased`}
+        className={`${bebasNeue.variable} ${dmSans.variable} antialiased`}
       >
         <Navbar />
         <main>{children}</main>
-        <NewsletterBanner />
         <Footer />
       </body>
     </html>

@@ -1,49 +1,43 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const sponsors = [
-  {
-    name: "VS Athletics",
-    href: "https://vsathletics.com",
-    logo: "/logos/partners/vs-athletics.png",
-  },
-  {
-    name: "Greenville Rec",
-    href: "https://greenvillerec.com",
-    logo: "/logos/partners/greenville-rec.png",
-  },
-  {
-    name: "Impario Flex",
-    href: "https://imparioflex.com",
-    logo: "/logos/partners/impario-flex.png",
-  },
+  { name: "First Horizon Foundation", logo: "/logos/sponsors/first-horizon.png" },
+  { name: "Ally Bank", logo: "/logos/sponsors/ally.png" },
+  { name: "City of Memphis", logo: "/logos/sponsors/city-of-memphis.jpg" },
+  { name: "McNeal McDonnell Foundation", logo: "/logos/sponsors/mcneal-mcdonnell.png" },
+  { name: "USATF", logo: "/logos/sponsors/usatf.png" },
+  { name: "Raymond James", logo: "/logos/sponsors/raymond-james.png" },
+  { name: "City Auto", logo: "/logos/sponsors/city-auto.jpeg" },
+  { name: "Lexus of Memphis", logo: "/logos/sponsors/lexus-of-memphis.jpg" },
+  { name: "ATL", logo: "/logos/sponsors/atl.png" },
+  { name: "Labry", logo: "/logos/sponsors/labry.png" },
+  { name: "Jim Keras Automotive", logo: "/logos/sponsors/jim-keras.png" },
 ];
 
 export default function SponsorStrip() {
   return (
-    <section className="border-y border-slate-200 py-16 px-6">
-      <p className="text-xs font-semibold tracking-[0.25em] uppercase text-slate-400 text-center mb-10 font-body">
-        Our Partners
+    <section className="border-y border-gray-200 py-10 md:py-14 px-6 overflow-hidden bg-white">
+      <p className="text-xs font-semibold tracking-[0.25em] uppercase text-gray-500 text-center mb-8 font-body">
+        Proudly Supported By
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-24 max-w-4xl mx-auto">
-        {sponsors.map((s) => (
-          <Link
-            key={s.name}
-            href={s.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group"
-          >
-            <div className="relative h-10 w-36 opacity-40 group-hover:opacity-80 transition-opacity grayscale group-hover:grayscale-0">
+      <div className="relative">
+        <div className="flex animate-marquee whitespace-nowrap items-center">
+          {[...sponsors, ...sponsors].map((sponsor, i) => (
+            <div
+              key={i}
+              className="inline-flex items-center justify-center mx-6 md:mx-10 shrink-0"
+              style={{ width: 120, height: 60 }}
+            >
               <Image
-                src={s.logo}
-                alt={s.name}
-                fill
-                className="object-contain"
+                src={sponsor.logo}
+                alt={sponsor.name}
+                width={120}
+                height={60}
+                className="object-contain max-h-[50px] w-auto grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               />
             </div>
-          </Link>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
