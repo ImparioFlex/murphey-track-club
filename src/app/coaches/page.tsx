@@ -145,8 +145,14 @@ export default function CoachesPage() {
 
           <FadeIn delay={100}>
             <div className="flex flex-col md:flex-row items-center gap-6 md:gap-10">
-              <div className="w-24 h-24 bg-charcoal rounded-full flex items-center justify-center shrink-0">
-                <span className="text-2xl font-extrabold font-heading text-orange">NB</span>
+              <div className="w-24 h-24 rounded-full overflow-hidden shrink-0">
+                <Image
+                  src="/images/coach-blackwell.webp"
+                  alt="Nick Blackwell"
+                  width={96}
+                  height={96}
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="text-center md:text-left">
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange font-body mb-2">
