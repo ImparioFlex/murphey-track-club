@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Mail } from "lucide-react";
 import SectionEyebrow from "@/components/SectionEyebrow";
@@ -42,10 +43,14 @@ export default function CoachesPage() {
             <FadeIn>
               <div>
                 <div className="flex items-center gap-5 mb-8">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-charcoal-mid rounded-full flex items-center justify-center shrink-0">
-                    <span className="text-2xl md:text-3xl font-extrabold font-heading text-orange">
-                      AS
-                    </span>
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shrink-0">
+                    <Image
+                      src="/images/coach-seymour.jpg"
+                      alt="Alisa Seymour"
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <SectionEyebrow dark>Executive Director &amp; Head Coach</SectionEyebrow>
