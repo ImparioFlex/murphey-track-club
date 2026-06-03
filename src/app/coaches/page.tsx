@@ -37,58 +37,77 @@ export default function CoachesPage() {
 
       {/* ===== HEAD COACH ===== */}
       <section className="bg-deep py-20 md:py-28 px-6">
-        <div className="mx-auto max-w-4xl">
-          <FadeIn>
-            <div className="text-center">
-              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-8 bg-charcoal-mid rounded-full flex items-center justify-center">
-                <span className="text-4xl md:text-5xl font-extrabold font-heading text-orange">
-                  AS
-                </span>
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <FadeIn>
+              <div>
+                <div className="flex items-center gap-5 mb-8">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-charcoal-mid rounded-full flex items-center justify-center shrink-0">
+                    <span className="text-2xl md:text-3xl font-extrabold font-heading text-orange">
+                      AS
+                    </span>
+                  </div>
+                  <div>
+                    <SectionEyebrow dark>Executive Director &amp; Head Coach</SectionEyebrow>
+                    <h2 className="text-3xl md:text-5xl font-extrabold font-heading uppercase text-white leading-[0.92]">
+                      Alisa Seymour
+                    </h2>
+                  </div>
+                </div>
+                <p className="text-sm text-orange-light font-body font-medium tracking-wider uppercase mb-8">
+                  Head Track Coach, Collierville HS &bull; USTFCCCA National Coach of the Year
+                </p>
+                <div className="space-y-4 text-gray-400 font-body leading-relaxed">
+                  <p>
+                    Hired as Executive Director and Head Coach in March 2023,
+                    bringing the Murphey Track Club to life. A former track &amp;
+                    field athlete at the University of Memphis, she holds a degree
+                    in Journalism and two Masters degrees in Education.
+                  </p>
+                  <p>
+                    At Collierville High School, she led the program to
+                    back-to-back Class AAA state championships (2024, 2025) and
+                    was named the 2025 USTFCCCA National High School Girls Track
+                    &amp; Field Coach of the Year — the first from Tennessee.
+                  </p>
+                  <p>
+                    Under her leadership, the Murphey Track Club has produced 20+
+                    national qualifiers, 2 national champions, and NCAA signees
+                    in just two seasons.
+                  </p>
+                </div>
+                <a
+                  href="mailto:agseymour1913@gmail.com"
+                  className="inline-flex items-center gap-2 mt-8 text-orange font-semibold font-body hover:text-orange-light transition-colors"
+                >
+                  <Mail className="w-4 h-4" /> agseymour1913@gmail.com
+                </a>
               </div>
-              <SectionEyebrow dark>Executive Director &amp; Head Coach</SectionEyebrow>
-              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6 md:mb-8">
-                Alisa Seymour
-              </h2>
-              <p className="text-sm text-orange-light font-body font-medium tracking-wider uppercase mb-8 md:mb-10">
-                Also Head Track Coach, Collierville High School &bull; USTFCCCA National Girls Coach of the Year
-              </p>
-              <div className="space-y-4 text-gray-400 font-body leading-relaxed max-w-2xl mx-auto mb-8 md:mb-10">
-                <p>
-                  Alisa Seymour was hired as Executive Director and Head Coach in
-                  March 2023, bringing the Murphey Track Club to life. A former
-                  track &amp; field athlete at the University of Memphis, she holds
-                  a degree in Journalism and two Masters degrees in Education.
-                </p>
-                <p>
-                  At Collierville High School, she led the program to back-to-back
-                  Class AAA state championships (2024, 2025) and was named the
-                  2025 USTFCCCA National High School Girls Track &amp; Field Coach
-                  of the Year — the first from Tennessee.
-                </p>
-                <p>
-                  Under her leadership, the Murphey Track Club has produced 20+
-                  national qualifiers, 2 national champions, and NCAA signees in
-                  just two seasons.
-                </p>
+            </FadeIn>
+
+            <FadeIn delay={150}>
+              <div className="lg:mt-16">
+                <blockquote className="border-l-2 border-orange pl-6 md:pl-8">
+                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic">
+                    &ldquo;Growing up in the inner city and participating in the
+                    youth track program played a pivotal role in shaping me into
+                    the person I am today. I hope to be a catalyst in providing
+                    this opportunity to other children just like me.&rdquo;
+                  </p>
+                </blockquote>
+                <div className="mt-10 grid grid-cols-2 gap-6">
+                  <div>
+                    <p className="stat-number text-3xl md:text-4xl text-orange">20+</p>
+                    <p className="text-xs font-bold tracking-[0.15em] uppercase text-gray-500 font-body mt-2">National Qualifiers</p>
+                  </div>
+                  <div>
+                    <p className="stat-number text-3xl md:text-4xl text-orange">2</p>
+                    <p className="text-xs font-bold tracking-[0.15em] uppercase text-gray-500 font-body mt-2">National Champions</p>
+                  </div>
+                </div>
               </div>
-
-              <blockquote className="border-l-2 border-orange pl-5 md:pl-8 text-left max-w-2xl mx-auto mb-10">
-                <p className="text-lg md:text-xl font-heading text-white/90 leading-snug italic">
-                  &ldquo;Growing up in the inner city and participating in the
-                  youth track program played a pivotal role in shaping me into the
-                  person I am today. I hope to be a catalyst in providing this
-                  opportunity to other children just like me.&rdquo;
-                </p>
-              </blockquote>
-
-              <a
-                href="mailto:agseymour1913@gmail.com"
-                className="inline-flex items-center gap-2 text-orange font-semibold font-body hover:text-orange-light transition-colors"
-              >
-                <Mail className="w-4 h-4" /> agseymour1913@gmail.com
-              </a>
-            </div>
-          </FadeIn>
+            </FadeIn>
+          </div>
         </div>
       </section>
 

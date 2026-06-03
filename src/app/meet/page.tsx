@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowRight, Calendar, MapPin, Trophy, ExternalLink } from "lucide-react";
 import SectionEyebrow from "@/components/SectionEyebrow";
 import FadeIn from "@/components/FadeIn";
 import { images } from "@/lib/images";
+
+export const metadata: Metadata = {
+  title: "Ed Murphey Classic | Murphey Track Club",
+};
 
 const highlights = [
   { stat: "#1", label: "IN THE WORLD", sub: "Ranked in its category" },
@@ -14,7 +19,7 @@ export default function MeetPage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pb-20 md:pb-28">
         <Image
           src={images.racePack}
           alt="Track competition"
