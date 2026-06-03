@@ -34,7 +34,7 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 font-body max-w-sm leading-relaxed">
+            <p className="text-gray-400 font-body max-w-sm leading-relaxed text-pretty">
               Keep Our Kids On The Right Track. Youth track &amp; field
               development through coaching, competition, and community. AAU and
               USATF sanctioned.

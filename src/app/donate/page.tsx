@@ -15,7 +15,7 @@ export default function DonatePage() {
               <br />
               <span className="text-orange">Our Youth</span>
             </h1>
-            <p className="text-gray-700 font-body text-lg leading-relaxed mt-8 max-w-2xl mx-auto">
+            <p className="text-gray-700 font-body text-xl leading-relaxed mt-8 max-w-3xl mx-auto text-pretty">
               Every dollar goes directly to local youth programs — coaching,
               equipment, competition fees, and free clinics for Memphis kids.
             </p>
@@ -36,7 +36,7 @@ export default function DonatePage() {
                 <p className="text-sm text-gray-500 font-body uppercase tracking-wider font-semibold mb-4">
                   Up to $5,000
                 </p>
-                <p className="text-gray-700 font-body leading-relaxed mb-8">
+                <p className="text-gray-700 font-body leading-relaxed mb-8 text-pretty">
                   Support youth track &amp; field in Memphis with a one-time
                   donation. A 3% processing fee applies to online donations.
                 </p>
@@ -65,7 +65,7 @@ export default function DonatePage() {
                 <p className="text-sm text-gray-500 font-body uppercase tracking-wider font-semibold mb-4">
                   $10,000+
                 </p>
-                <p className="text-gray-700 font-body leading-relaxed mb-8">
+                <p className="text-gray-700 font-body leading-relaxed mb-8 text-pretty">
                   Become a sponsor of the Ed Murphey Classic and Murphey Track
                   Club. Contact Eddie Murphey directly for sponsorship packages.
                 </p>
@@ -107,7 +107,7 @@ export default function DonatePage() {
       <section className="bg-white py-16 md:py-20 px-6">
         <div className="mx-auto max-w-4xl text-center">
           <FadeIn>
-            <p className="text-gray-700 font-body leading-relaxed mb-6">
+            <p className="text-gray-700 font-body leading-relaxed mb-6 text-pretty">
               Not ready to donate? There are other ways to support the club.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

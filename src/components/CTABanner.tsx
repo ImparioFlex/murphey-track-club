@@ -14,7 +14,7 @@ export default function CTABanner() {
           <br />
           <span className="text-gradient">On The Right Track</span>
         </h2>
-        <p className="text-xl text-gray-400 font-body max-w-xl mx-auto mb-12 md:mb-14">
+        <p className="text-xl text-gray-400 font-body max-w-2xl mx-auto mb-12 md:mb-14 text-pretty">
           Register your athlete today and give them the coaching, community, and
           competition they deserve.
         </p>

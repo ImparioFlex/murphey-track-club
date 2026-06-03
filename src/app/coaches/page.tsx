@@ -27,7 +27,7 @@ export default function CoachesPage() {
               <br />
               <span className="text-orange">Staff</span>
             </h1>
-            <p className="text-lg text-gray-700 font-body leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto text-pretty">
               Ten dedicated coaches committed to developing the next generation
               of track &amp; field athletes in Memphis. Training Monday, Tuesday,
               and Thursday at Halle Stadium.
@@ -63,19 +63,19 @@ export default function CoachesPage() {
                   Head Track Coach, Collierville HS &bull; USTFCCCA National Coach of the Year
                 </p>
                 <div className="space-y-4 text-gray-400 font-body leading-relaxed">
-                  <p>
+                  <p className="text-pretty">
                     Hired as Executive Director and Head Coach in March 2023,
                     bringing the Murphey Track Club to life. A former track &amp;
                     field athlete at the University of Memphis, she holds a degree
                     in Journalism and two Masters degrees in Education.
                   </p>
-                  <p>
+                  <p className="text-pretty">
                     At Collierville High School, she led the program to
                     back-to-back Class AAA state championships (2024, 2025) and
                     was named the 2025 USTFCCCA National High School Girls Track
                     &amp; Field Coach of the Year — the first from Tennessee.
                   </p>
-                  <p>
+                  <p className="text-pretty">
                     Under her leadership, the Murphey Track Club has produced 20+
                     national qualifiers, 2 national champions, and NCAA signees
                     in just two seasons.
@@ -93,7 +93,7 @@ export default function CoachesPage() {
             <FadeIn delay={150}>
               <div className="lg:mt-16">
                 <blockquote className="border-l-2 border-orange pl-6 md:pl-8">
-                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic">
+                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic text-pretty">
                     &ldquo;Growing up in the inner city and participating in the
                     youth track program played a pivotal role in shaping me into
                     the person I am today. I hope to be a catalyst in providing
@@ -137,7 +137,7 @@ export default function CoachesPage() {
                 <h3 className="text-3xl md:text-4xl font-extrabold font-heading uppercase text-charcoal">
                   Kevaughn Griffith
                 </h3>
-                <p className="text-gray-700 font-body mt-3 leading-relaxed max-w-xl">
+                <p className="text-gray-700 font-body mt-3 leading-relaxed max-w-xl text-pretty">
                   Two-time TSSAA state champion in the 110m hurdles at White
                   Station High School. Competed Division I at the University of
                   South Carolina. Now oversees day-to-day operations and training
@@ -167,7 +167,7 @@ export default function CoachesPage() {
                 <h3 className="text-3xl md:text-4xl font-extrabold font-heading uppercase text-charcoal">
                   Nick Blackwell
                 </h3>
-                <p className="text-gray-700 font-body mt-3 leading-relaxed max-w-xl">
+                <p className="text-gray-700 font-body mt-3 leading-relaxed max-w-xl text-pretty">
                   14 years of coaching experience specializing in throws. Has
                   produced 5 state qualifiers and a state decathlon champion. Also
                   brings 14 years of football coaching, with 9 athletes placed at
@@ -215,12 +215,12 @@ export default function CoachesPage() {
       <section className="bg-charcoal py-16 md:py-24 px-6">
         <div className="mx-auto max-w-4xl text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6">
+            <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6 text-balance">
               Ready To
               <br />
               <span className="text-gradient">Join The Team?</span>
             </h2>
-            <p className="text-lg text-gray-400 font-body max-w-xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl text-gray-400 font-body max-w-2xl mx-auto mb-12 leading-relaxed text-pretty">
               Registration is open for elementary, middle, and high school
               athletes. $100 covers your USATF membership and club uniform.
             </p>

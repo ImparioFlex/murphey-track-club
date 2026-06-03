@@ -29,7 +29,7 @@ export default function InstagramFeed() {
             @murpheytrackclub
           </span>
         </a>
-        <p className="text-gray-400 font-body mt-3 text-sm md:text-base">
+        <p className="text-gray-400 font-body mt-3 text-sm md:text-base text-pretty">
           Follow us for training updates, meet results, and community highlights
         </p>
       </div>

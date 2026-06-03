@@ -25,7 +25,7 @@ export default function JoinPage() {
               <br />
               <span className="text-orange">Athlete</span>
             </h1>
-            <p className="text-gray-700 font-body text-lg leading-relaxed mt-8 max-w-2xl mx-auto">
+            <p className="text-gray-700 font-body text-xl leading-relaxed mt-8 max-w-3xl mx-auto text-pretty">
               Open to elementary, middle, and high school athletes in Memphis
               and surrounding areas. Season begins June 1st at Halle Stadium.
             </p>
@@ -91,7 +91,7 @@ export default function JoinPage() {
                 <h3 className="font-heading font-extrabold text-2xl uppercase tracking-wide text-charcoal mb-3">
                   Register Now
                 </h3>
-                <p className="text-gray-700 font-body text-base leading-relaxed mb-8">
+                <p className="text-gray-700 font-body text-base leading-relaxed mb-8 text-pretty">
                   Click below to fill out the registration form. You&apos;ll
                   need your athlete&apos;s information and a parent/guardian
                   contact.
@@ -152,7 +152,7 @@ export default function JoinPage() {
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading uppercase text-charcoal leading-[0.92] mb-6">
               Rep The Club.
             </h2>
-            <p className="text-gray-700 font-body leading-relaxed max-w-xl mx-auto mb-8">
+            <p className="text-gray-700 font-body leading-relaxed max-w-2xl mx-auto mb-8 text-pretty">
               Hoodies, hats, travel mugs, and more. All proceeds support local
               youth programs.
             </p>

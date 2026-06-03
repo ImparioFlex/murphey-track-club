@@ -58,31 +58,31 @@ export default function AboutPage() {
             </FadeIn>
 
             <FadeIn delay={100} className="lg:col-span-7">
-              <div className="space-y-6 text-gray-700 font-body leading-relaxed text-lg">
-                <p className="text-charcoal font-semibold text-xl">
+              <div className="space-y-6 text-gray-700 font-body leading-relaxed text-xl">
+                <p className="text-charcoal font-semibold text-xl text-pretty">
                   Every kid in Memphis deserves a coach, a team, and a reason
                   to believe in themselves.
                 </p>
-                <p>
+                <p className="text-pretty">
                   The Murphey Track Club was established in 2023 as part of the
                   Ed Murphey Classic&apos;s commitment to youth development in
                   Memphis and surrounding areas. Named after Ed Murphey —
                   1955-1957 SEC Mile Champion — the club carries forward a
                   legacy of excellence in track &amp; field.
                 </p>
-                <p>
+                <p className="text-pretty">
                   We hold membership with both the Amateur Athletic Union (AAU)
                   and USA Track &amp; Field (USATF), providing our athletes with
                   access to sanctioned competition at the local, regional, and
                   national level.
                 </p>
-                <p>
+                <p className="text-pretty">
                   Under the leadership of Executive Director and Head Coach
                   Alisa Seymour, the club serves elementary, middle, and high
                   school athletes with structured training three days a week at
                   Halle Stadium.
                 </p>
-                <p className="text-charcoal font-semibold">
+                <p className="text-charcoal font-semibold text-pretty">
                   ALL proceeds from merchandise, concessions, registration fees,
                   and tickets go directly to local youth programs.
                 </p>
@@ -100,7 +100,7 @@ export default function AboutPage() {
             <h2 className="text-4xl md:text-7xl font-extrabold font-heading uppercase text-charcoal leading-[0.88] mb-4 md:mb-6">
               Beyond The Track.
             </h2>
-            <p className="text-lg text-gray-700 font-body leading-relaxed max-w-2xl mb-14 md:mb-20">
+            <p className="text-xl text-gray-700 font-body leading-relaxed max-w-3xl mb-14 md:mb-20 text-pretty">
               Track &amp; field is the vehicle. Youth empowerment is the
               destination. Here&apos;s how we give back.
             </p>
@@ -191,7 +191,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
                   Free Clinic for Kids
                 </h3>
-                <p className="text-gray-400 font-body mt-2">
+                <p className="text-gray-400 font-body mt-2 text-pretty">
                   Olympians Harrison Williams, Jessica Ramsey, and Michelle
                   Atherley coaching Memphis youth at Halle Stadium.
                 </p>
@@ -212,7 +212,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
                   MSCS Summer Metro Camp
                 </h3>
-                <p className="text-gray-400 font-body mt-2">
+                <p className="text-gray-400 font-body mt-2 text-pretty">
                   Memphis-Shelby County Schools partnership bringing track &amp;
                   field to students across the district.
                 </p>
@@ -233,7 +233,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
                   Pole Vault Clinic
                 </h3>
-                <p className="text-gray-400 font-body mt-2">
+                <p className="text-gray-400 font-body mt-2 text-pretty">
                   Free pole vault instruction led by Olympian Jeff Hartwig at
                   Collierville High School.
                 </p>
@@ -254,7 +254,7 @@ export default function AboutPage() {
                 <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
                   Quincy Wilson — U18 World Record
                 </h3>
-                <p className="text-gray-400 font-body mt-2">
+                <p className="text-gray-400 font-body mt-2 text-pretty">
                   17-year-old Quincy Wilson runs 44.10 in the 400m at the 2025
                   Ed Murphey Classic. The future is here.
                 </p>
@@ -276,13 +276,13 @@ export default function AboutPage() {
               1955–1957 SEC Mile Champion
             </p>
             <div className="space-y-5 text-gray-400 font-body leading-relaxed">
-              <p>
+              <p className="text-pretty">
                 The Ed Murphey Classic — now entering its 10th year — honors
                 the legacy of a true champion. A three-time SEC Mile Champion,
                 Ed Murphey dedicated his life to the sport of track &amp; field
                 and to the community of Memphis.
               </p>
-              <p>
+              <p className="text-pretty">
                 What started as a track meet has grown into a movement. The Ed
                 Murphey Classic is now the final stop on the inaugural USATF
                 Tour, joining Los Angeles, Philadelphia, Portland, Tucson, and
@@ -290,7 +290,7 @@ export default function AboutPage() {
                 attracts world-class athletes including Ryan Crouser — 3-time
                 Olympic Champion and World Record holder.
               </p>
-              <p>
+              <p className="text-pretty">
                 The Murphey Track Club extends that legacy to the next
                 generation — ensuring that every young athlete in Memphis has
                 access to the coaching, competition, and community that Ed
@@ -323,12 +323,12 @@ export default function AboutPage() {
       <section className="bg-charcoal py-16 md:py-24 px-6">
         <div className="mx-auto max-w-4xl text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6">
+            <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6 text-balance">
               Be Part Of
               <br />
               The Movement.
             </h2>
-            <p className="text-lg text-white/60 font-body leading-relaxed max-w-xl mx-auto mb-12">
+            <p className="text-xl text-white/60 font-body leading-relaxed max-w-2xl mx-auto mb-12 text-pretty">
               Whether you register an athlete, volunteer your time, or support
               with a donation — you are helping build the future of track &amp;
               field in Memphis.

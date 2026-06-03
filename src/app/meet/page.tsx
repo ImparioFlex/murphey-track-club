@@ -37,7 +37,7 @@ export default function MeetPage() {
             <br />
             <span className="text-gradient">Classic</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/70 font-body max-w-3xl mx-auto mb-12 leading-relaxed text-pretty">
             The final stop on the inaugural USATF Tour. World-class athletes,
             $50K in prize money, and the Beale Street Murphey Mile. Memphis&apos;s
             premier track &amp; field event — now in its 10th year.
@@ -97,19 +97,19 @@ export default function MeetPage() {
                   </div>
                 </div>
                 <div className="space-y-4 text-gray-700 font-body leading-relaxed">
-                  <p>
+                  <p className="text-pretty">
                     The Ed Murphey Classic has grown from a local track meet into
                     one of the most anticipated events in American track &amp;
                     field. In 2026, it joins the inaugural USATF Tour alongside
                     Los Angeles, Philadelphia, Portland, Tucson, and eight other
                     cities.
                   </p>
-                  <p>
+                  <p className="text-pretty">
                     The weekend features elite competition, the iconic Beale
                     Street Murphey Mile, live music, food trucks, beer vendors,
                     merchandise, and a trackside after-party.
                   </p>
-                  <p className="text-charcoal font-semibold">
+                  <p className="text-charcoal font-semibold text-pretty">
                     ALL proceeds go to local youth programs through the Murphey
                     Track Club.
                   </p>
@@ -123,7 +123,7 @@ export default function MeetPage() {
                   <h3 className="text-lg font-extrabold font-heading uppercase text-charcoal mb-2">
                     Beale Street Murphey Mile
                   </h3>
-                  <p className="text-gray-700 font-body leading-relaxed">
+                  <p className="text-gray-700 font-body leading-relaxed text-pretty">
                     A one-mile race through the heart of downtown Memphis on
                     legendary Beale Street. Open to runners of all levels.
                   </p>
@@ -141,7 +141,7 @@ export default function MeetPage() {
                   <h3 className="text-lg font-extrabold font-heading uppercase text-charcoal mb-2">
                     Get Tickets
                   </h3>
-                  <p className="text-gray-700 font-body leading-relaxed">
+                  <p className="text-gray-700 font-body leading-relaxed text-pretty">
                     Experience world-class track &amp; field live. Tickets
                     available through EventBrite.
                   </p>
@@ -159,7 +159,7 @@ export default function MeetPage() {
                   <h3 className="text-lg font-extrabold font-heading uppercase text-charcoal mb-2">
                     Volunteer
                   </h3>
-                  <p className="text-gray-700 font-body leading-relaxed">
+                  <p className="text-gray-700 font-body leading-relaxed text-pretty">
                     Help make the Ed Murphey Classic happen. Volunteers are the
                     backbone of this event.
                   </p>
@@ -197,7 +197,7 @@ export default function MeetPage() {
                 className="w-full h-full"
               />
             </div>
-            <p className="text-gray-400 font-body mt-4 text-center">
+            <p className="text-gray-400 font-body mt-4 text-center text-pretty">
               2025 Ed Murphey Classic — full replay featuring world-class
               competition, the Beale Street Murphey Mile, and youth 100m finals.
             </p>

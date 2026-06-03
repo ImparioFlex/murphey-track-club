@@ -55,7 +55,7 @@ export default function HomePage() {
             Keep Our Kids{" "}
             <span className="text-gradient">On The Right Track</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/70 font-body max-w-3xl mx-auto mb-12 leading-relaxed text-pretty">
             Youth track &amp; field club serving elementary, middle, and high
             school athletes in Memphis and the surrounding areas. Building
             champions on and off the track.
@@ -109,7 +109,7 @@ export default function HomePage() {
                 <br />
                 A Track Club.
               </h2>
-              <p className="text-lg text-gray-700 font-body leading-relaxed max-w-2xl">
+              <p className="text-xl text-gray-700 font-body leading-relaxed max-w-3xl text-pretty">
                 We develop young athletes through structured coaching,
                 competitive opportunities, and a community that believes every
                 kid deserves a chance to discover what they are capable of.
@@ -226,7 +226,7 @@ export default function HomePage() {
           <FadeIn>
             <div className="text-center mb-10 md:mb-16">
               <SectionEyebrow>2026 Season</SectionEyebrow>
-              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-charcoal leading-[0.92]">
+              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-charcoal leading-[0.92] text-balance">
                 Upcoming Competitions
               </h2>
             </div>
@@ -301,14 +301,14 @@ export default function HomePage() {
                 <span className="text-gradient">A Week.</span>
               </h2>
               <div className="space-y-6 text-gray-400 font-body leading-relaxed">
-                <p>
+                <p className="text-pretty">
                   Training runs Monday, Tuesday, and Thursday from 5:30 PM to
                   7:00 PM at Halle Stadium. Season begins June 1st.
                 </p>
-                <p className="text-white font-semibold text-lg">
+                <p className="text-white font-semibold text-lg text-pretty">
                   $100 competition fee covers USATF membership and club uniform.
                 </p>
-                <p>
+                <p className="text-pretty">
                   Open to elementary, middle, and high school athletes in
                   Memphis and the surrounding areas.
                 </p>

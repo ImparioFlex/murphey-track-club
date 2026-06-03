@@ -49,7 +49,7 @@ export default function SchedulePage() {
               <br />
               <span className="text-orange">Competition</span>
             </h1>
-            <p className="text-lg text-gray-700 font-body leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 font-body leading-relaxed max-w-3xl mx-auto text-pretty">
               Season begins June 1st. Three training sessions per week at Halle
               Stadium, plus competitions from local invitationals to the USATF
               Junior Olympics.
@@ -154,12 +154,12 @@ export default function SchedulePage() {
       <section className="bg-charcoal py-16 md:py-24 px-6">
         <div className="mx-auto max-w-4xl text-center">
           <FadeIn>
-            <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6">
+            <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92] mb-6 text-balance">
               Ready To
               <br />
               <span className="text-gradient">Compete?</span>
             </h2>
-            <p className="text-lg text-gray-400 font-body max-w-xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl text-gray-400 font-body max-w-2xl mx-auto mb-12 leading-relaxed text-pretty">
               Register your athlete today. $100 covers USATF membership, club
               uniform, and access to all training and competitions.
             </p>
