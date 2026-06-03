@@ -98,7 +98,7 @@ export default function JoinPage() {
                 </p>
 
                 <a
-                  href="https://edmurpheyclassic.com/club-details"
+                  href="https://forms.gle/dubjb5PDAmhicW2U7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-slide-up-dark bg-orange text-charcoal w-full px-8 py-4 text-base font-bold uppercase tracking-wider font-body text-center block mb-4"
