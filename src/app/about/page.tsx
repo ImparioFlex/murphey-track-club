@@ -204,6 +204,17 @@ export default function AboutPage() {
                 It only cares how hard you&apos;re willing to work.&rdquo;
               </p>
             </blockquote>
+
+            <div className="mt-12 md:mt-16">
+              <a
+                href="https://edmurpheyclassic.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-slide-up-white inline-flex items-center gap-2 px-10 py-4 border-2 border-orange text-orange text-base font-bold uppercase tracking-wider font-body"
+              >
+                Visit EdMurpheyClassic.com <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
           </FadeIn>
         </div>
       </section>
