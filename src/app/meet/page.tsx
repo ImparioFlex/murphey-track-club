@@ -5,9 +5,9 @@ import FadeIn from "@/components/FadeIn";
 import { images } from "@/lib/images";
 
 const highlights = [
-  { stat: "10th", label: "Annual Event", sub: "2026 Edition" },
+  { stat: "#1", label: "IN THE WORLD", sub: "Ranked in its category" },
   { stat: "$50K", label: "Prize Money", sub: "Top male & female" },
-  { stat: "13", label: "USATF Tour Cities", sub: "Final tour stop" },
+  { stat: "350+", label: "OLYMPIC ATHLETES", sub: "Hosted since 2017" },
 ];
 
 export default function MeetPage() {

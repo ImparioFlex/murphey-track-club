@@ -11,7 +11,7 @@ import { images } from "@/lib/images";
 const stats = [
   { number: "250+", label: "ATHLETES", sub: "Across 3 training sites" },
   { number: "100%", label: "FREE", sub: "Coaching, uniforms & shoes" },
-  { number: "20+", label: "NATIONAL QUALIFIERS", sub: "2024–2025 season" },
+  { number: "2", label: "NATIONAL CHAMPIONS", sub: "Plus 20+ qualifiers & NCAA signees" },
 ];
 
 const schedule = [
