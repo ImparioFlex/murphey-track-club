@@ -1,5 +1,5 @@
 export const images = {
-  hero: "/images/youth-sprint-2.jpg",
+  hero: "/images/hero-track-curve.jpg",
   heroTrack: "/images/emc/emc-2019-13.jpg",
   storyPhoto: "/images/emc/team-photo.jpg",
   community: "/images/emc/emc-2019-01.jpg",
