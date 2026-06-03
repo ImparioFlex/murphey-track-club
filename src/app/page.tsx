@@ -37,7 +37,7 @@ export default function HomePage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-charcoal/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-charcoal/90" />
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <div className="flex justify-center mb-8">
             <Image
@@ -51,9 +51,8 @@ export default function HomePage() {
           <p className="text-sm md:text-base font-bold tracking-[0.25em] uppercase text-orange mb-6 font-body">
             Memphis, TN &bull; AAU &amp; USATF Sanctioned
           </p>
-          <h1 className="text-[clamp(3rem,9vw,8rem)] leading-[0.88] font-extrabold font-heading uppercase text-white mb-8">
-            Keep Our Kids
-            <br />
+          <h1 className="text-[clamp(2.5rem,7vw,6rem)] leading-[0.92] font-extrabold font-heading uppercase text-white mb-8">
+            Keep Our Kids{" "}
             <span className="text-gradient">On The Right Track</span>
           </h1>
           <p className="text-lg md:text-xl text-white/70 font-body max-w-2xl mx-auto mb-12 leading-relaxed">
