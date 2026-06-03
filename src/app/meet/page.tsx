@@ -178,6 +178,33 @@ export default function MeetPage() {
         </div>
       </section>
 
+      {/* ===== FEATURED VIDEO ===== */}
+      <section className="bg-charcoal py-16 md:py-24 px-6">
+        <div className="mx-auto max-w-4xl">
+          <FadeIn>
+            <div className="text-center mb-10">
+              <SectionEyebrow dark>Watch</SectionEyebrow>
+              <h2 className="text-3xl md:text-5xl font-extrabold font-heading uppercase text-white leading-[0.92]">
+                The Classic On Screen
+              </h2>
+            </div>
+            <div className="aspect-video bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/waw9N4MR4n8"
+                title="2025 Ed Murphey Classic Full Replay"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <p className="text-gray-400 font-body mt-4 text-center">
+              2025 Ed Murphey Classic — full replay featuring world-class
+              competition, the Beale Street Murphey Mile, and youth 100m finals.
+            </p>
+          </FadeIn>
+        </div>
+      </section>
+
       {/* ===== SPONSORS ===== */}
       <section className="bg-cream py-16 md:py-20 px-6">
         <div className="mx-auto max-w-4xl">

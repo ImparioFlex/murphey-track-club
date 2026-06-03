@@ -164,6 +164,106 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ===== VIDEO HIGHLIGHTS ===== */}
+      <section className="bg-charcoal py-20 md:py-32 px-6">
+        <div className="mx-auto max-w-6xl">
+          <FadeIn>
+            <div className="text-center mb-12 md:mb-16">
+              <SectionEyebrow dark>See It In Action</SectionEyebrow>
+              <h2 className="text-4xl md:text-6xl font-extrabold font-heading uppercase text-white leading-[0.92]">
+                Highlights
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+            <FadeIn>
+              <div>
+                <div className="aspect-video bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/IJZ1w6ysHn4"
+                    title="Murphey Track Club hosts free clinic for kids"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+                <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
+                  Free Clinic for Kids
+                </h3>
+                <p className="text-gray-400 font-body mt-2">
+                  Olympians Harrison Williams, Jessica Ramsey, and Michelle
+                  Atherley coaching Memphis youth at Halle Stadium.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={100}>
+              <div>
+                <div className="aspect-video bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/X5LeVVA4b7U"
+                    title="MSCS Summer Metro Camp"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+                <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
+                  MSCS Summer Metro Camp
+                </h3>
+                <p className="text-gray-400 font-body mt-2">
+                  Memphis-Shelby County Schools partnership bringing track &amp;
+                  field to students across the district.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={150}>
+              <div>
+                <div className="aspect-video bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/T053zfmGhMo"
+                    title="Murphey Pole Vault Clinic"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+                <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
+                  Pole Vault Clinic
+                </h3>
+                <p className="text-gray-400 font-body mt-2">
+                  Free pole vault instruction led by Olympian Jeff Hartwig at
+                  Collierville High School.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={200}>
+              <div>
+                <div className="aspect-video bg-black">
+                  <iframe
+                    src="https://www.youtube.com/embed/CBJ8gxcivII"
+                    title="Quincy Wilson breaks U18 400m world record"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                </div>
+                <h3 className="text-lg font-extrabold font-heading uppercase text-white mt-4">
+                  Quincy Wilson — U18 World Record
+                </h3>
+                <p className="text-gray-400 font-body mt-2">
+                  17-year-old Quincy Wilson runs 44.10 in the 400m at the 2025
+                  Ed Murphey Classic. The future is here.
+                </p>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
       {/* ===== ED MURPHEY LEGACY ===== */}
       <section className="bg-deep py-20 md:py-32 px-6">
         <div className="mx-auto max-w-4xl">
