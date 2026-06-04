@@ -92,8 +92,8 @@ export default function CoachesPage() {
 
             <FadeIn delay={150}>
               <div className="flex flex-col items-center justify-center h-full">
-                <blockquote className="border-l-2 border-orange pl-6 md:pl-8">
-                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic text-pretty">
+                <blockquote className="text-center">
+                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic text-balance">
                     &ldquo;Growing up in the inner city and participating in the
                     youth track program played a pivotal role in shaping me into
                     the person I am today. I hope to be a catalyst in providing
