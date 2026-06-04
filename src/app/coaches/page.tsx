@@ -39,7 +39,7 @@ export default function CoachesPage() {
       {/* ===== HEAD COACH ===== */}
       <section className="bg-deep py-20 md:py-28 px-6">
         <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
             <FadeIn>
               <div>
                 <div className="flex items-center gap-5 mb-8">
@@ -92,8 +92,8 @@ export default function CoachesPage() {
 
             <FadeIn delay={150}>
               <div className="flex flex-col items-center justify-center h-full">
-                <blockquote className="text-center">
-                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic text-balance">
+                <blockquote className="border-l-2 border-orange pl-6 md:pl-8">
+                  <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic text-pretty">
                     &ldquo;Growing up in the inner city and participating in the
                     youth track program played a pivotal role in shaping me into
                     the person I am today. I hope to be a catalyst in providing
