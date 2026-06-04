@@ -256,7 +256,7 @@ export default function HomePage() {
                         i % 2 === 0 ? "bg-white" : "bg-gray-100"
                       }`}
                     >
-                      <td className="px-3 md:px-6 py-3 md:py-5 font-bold text-orange font-heading uppercase tracking-wide whitespace-nowrap">
+                      <td className="px-3 md:px-6 py-3 md:py-5 font-bold text-orange-dark font-heading uppercase tracking-wide whitespace-nowrap">
                         {row.date}
                       </td>
                       <td className="px-3 md:px-6 py-3 md:py-5 text-charcoal font-semibold">

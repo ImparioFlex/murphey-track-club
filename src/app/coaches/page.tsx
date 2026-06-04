@@ -91,7 +91,7 @@ export default function CoachesPage() {
             </FadeIn>
 
             <FadeIn delay={150}>
-              <div className="lg:mt-16">
+              <div className="flex flex-col items-center justify-center h-full">
                 <blockquote className="border-l-2 border-orange pl-6 md:pl-8">
                   <p className="text-2xl md:text-3xl font-heading text-white/90 leading-snug italic text-pretty">
                     &ldquo;Growing up in the inner city and participating in the
@@ -100,12 +100,12 @@ export default function CoachesPage() {
                     this opportunity to other children just like me.&rdquo;
                   </p>
                 </blockquote>
-                <div className="mt-10 grid grid-cols-2 gap-6">
-                  <div>
+                <div className="mt-10 grid grid-cols-2 gap-6 w-full">
+                  <div className="text-center">
                     <p className="stat-number text-3xl md:text-4xl text-orange">20+</p>
                     <p className="text-xs font-bold tracking-[0.15em] uppercase text-gray-500 font-body mt-2">National Qualifiers</p>
                   </div>
-                  <div>
+                  <div className="text-center">
                     <p className="stat-number text-3xl md:text-4xl text-orange">2</p>
                     <p className="text-xs font-bold tracking-[0.15em] uppercase text-gray-500 font-body mt-2">National Champions</p>
                   </div>
