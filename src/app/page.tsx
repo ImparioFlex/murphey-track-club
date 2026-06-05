@@ -52,13 +52,13 @@ export default function HomePage() {
             Memphis, TN &bull; AAU &amp; USATF Sanctioned
           </p>
           <h1 className="text-[clamp(2.5rem,7vw,6rem)] leading-[0.92] font-extrabold font-heading uppercase text-white mb-8">
-            Keep Our Kids{" "}
+            Keeping Our Kids
+            <br />
             <span className="text-gradient">On The Right Track</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/70 font-body max-w-3xl mx-auto mb-12 leading-relaxed text-pretty">
-            Youth track &amp; field club serving elementary, middle, and high
-            school athletes in Memphis and the surrounding areas. Building
-            champions on and off the track.
+            No-cost track and field coaching and team experience for Memphis
+            and area middle and high school athletes.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
