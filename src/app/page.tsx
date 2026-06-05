@@ -29,7 +29,7 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pb-20 md:pb-28 -mt-20 pt-20">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pb-20 md:pb-28 -mt-20 pt-32 md:pt-40">
         <Image
           src={images.hero}
           alt="Youth athletes racing on the track"
