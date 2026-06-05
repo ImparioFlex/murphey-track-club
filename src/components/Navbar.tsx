@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Coaches", href: "/coaches" },
   { label: "Schedule", href: "/schedule" },
   { label: "Donate", href: "/donate" },
-  { label: "The Classic", href: "/meet" },
+  { label: "Ed Murphey Classic", href: "/meet" },
 ];
 
 export default function Navbar() {

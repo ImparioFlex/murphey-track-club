@@ -86,10 +86,10 @@ export default function HomePage() {
                 <p className="stat-number text-4xl md:text-6xl text-orange">
                   {stat.number}
                 </p>
-                <p className="text-xs font-bold tracking-[0.25em] uppercase text-white/60 font-body mt-3">
+                <p className="text-sm md:text-base font-bold tracking-[0.25em] uppercase text-white/80 font-body mt-3">
                   {stat.label}
                 </p>
-                <p className="text-sm text-white/40 font-body mt-1">
+                <p className="text-base md:text-lg text-white/60 font-body mt-1">
                   {stat.sub}
                 </p>
               </div>

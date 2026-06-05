@@ -8,7 +8,7 @@ const footerLinks = [
   { label: "Schedule", href: "/schedule" },
   { label: "Join", href: "/join" },
   { label: "Donate", href: "/donate" },
-  { label: "The Classic", href: "/meet" },
+  { label: "Ed Murphey Classic", href: "/meet" },
 ];
 
 export default function Footer() {
