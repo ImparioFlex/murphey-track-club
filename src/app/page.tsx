@@ -10,7 +10,7 @@ import { images } from "@/lib/images";
 
 const stats = [
   { number: "250+", label: "ATHLETES", sub: "Across 3 training sites" },
-  { number: "100%", label: "FREE", sub: "Coaching, uniforms & shoes" },
+  { number: "2023", label: "EST.", sub: "Memphis, Tennessee" },
   { number: "2", label: "NATIONAL CHAMPIONS", sub: "Plus 20+ qualifiers & NCAA signees" },
 ];
 
