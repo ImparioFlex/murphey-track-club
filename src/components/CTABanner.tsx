@@ -10,7 +10,7 @@ export default function CTABanner() {
 
       <div className="mx-auto max-w-4xl text-center relative z-10">
         <h2 className="text-5xl md:text-8xl font-extrabold font-heading uppercase text-white leading-[0.9] mb-6 md:mb-10">
-          Keep Our Kids
+          Keeping Our Kids
           <br />
           <span className="text-gradient">On The Right Track</span>
         </h2>
